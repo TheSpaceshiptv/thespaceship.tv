@@ -777,7 +777,7 @@ body.woocommerce-account p button:hover {
 }
 
 
-.featured {
+.home .featured {
 	width:100%;
   	display:flex;
     justify-content: space-around;
@@ -791,7 +791,7 @@ body.woocommerce-account p button:hover {
     position:relative;
     box-shadow: 0 10px 0 rgba(0,0,0,0.5);
 }
-.featured::after {
+.home .featured::after {
     content:"Past Shows";
     color:#B1C8C8;
     position:absolute;
