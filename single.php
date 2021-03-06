@@ -96,7 +96,7 @@
 
 	
 <!-- RELOAD IF SHOW GOES LIVE -->
-<?php if($early): ?>
+<?php if($early && ($bought || $free || $admin || $crew)): ?>
 <script>
 	var ShowTime = new Date('<?php GET('start'); ?>');
 	var CurrentTime = new Date().toLocaleString();
