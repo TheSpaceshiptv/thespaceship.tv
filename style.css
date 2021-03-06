@@ -186,6 +186,29 @@ b, strong {
     max-width: 480px;
     grid: auto / 1fr 2fr;
 }
+.home .featured {
+	width:100%;
+  	display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  	flex-wrap:wrap-reverse;
+  	flex-direction:row-reverse;
+  	border-bottom: #E966C2 double;
+    border-radius: 10px;
+  	padding-bottom: 10px;
+  	margin-bottom: 140px;
+    position:relative;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.5);
+}
+.home .featured::after {
+    content:"Past Shows";
+    color:#B1C8C8;
+    position:absolute;
+    text-align:center;
+    bottom:-100px;
+    text-shadow: 0 0 5px #000;
+    font-size: 30px;
+}
 .home .site-card h1 {
     margin: 0 0 5px;
     font-size: 20px;
@@ -776,27 +799,3 @@ body.woocommerce-account p button:hover {
     border:none;
 }
 
-
-.home .featured {
-	width:100%;
-  	display:flex;
-    justify-content: space-around;
-    align-items: flex-start;
-  	flex-wrap:wrap-reverse;
-  	flex-direction:row-reverse;
-  	border-bottom: #E966C2 double;
-    border-radius: 10px;
-  	padding-bottom: 10px;
-  	margin-bottom: 140px;
-    position:relative;
-    box-shadow: 0 10px 0 rgba(0,0,0,0.5);
-}
-.home .featured::after {
-    content:"Past Shows";
-    color:#B1C8C8;
-    position:absolute;
-    text-align:center;
-    bottom:-100px;
-    text-shadow: 0 0 5px #000;
-    font-size: 30px;
-}
