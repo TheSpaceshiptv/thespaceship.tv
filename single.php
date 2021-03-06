@@ -31,7 +31,7 @@
 
 
 		    <!-- CHAT -->
-		    <?php if ($live && ($bought || $free || $admin || $crew)): ?> 
+		    <?php if ($ontime && ($bought || $free || $admin || $crew)): ?> 
 		    <div class="site-chat"><iframe src="https://vimeo.com/live-chat/<?php echo GET('videoid'); ?>/" width="100%" height="100%" frameborder="0"></iframe></div>
 		    <?php endif; ?>
 
@@ -77,7 +77,7 @@
 
 
 		<!-- LEFT COLUMN SHOW NOTES -->
-		<?php if ( $early || $ontime || !($bought || $free || $admin || $crew)): 
+		<?php if ( $ontime || !($bought || $free || $admin || $crew)): 
 		    $terms = get_the_terms($product->ID, 'product_cat');
 		    foreach ($terms as $term) {
 			  $product_cat = $term->name;
@@ -94,6 +94,24 @@
 
 	    </div>
 
+	
+<!-- RELOAD IF SHOW GOES LIVE -->
+<?php if($early): ?>
+<script>
+	var ShowTime = new Date('<?php GET('start'); ?>');
+	var CurrentTime = new Date().toLocaleString();
+	function CheckIfLive() {
+		if(CurrentTime >= ShowTime) {
+			location.reload();
+		}
+	}
+	setInterval(
+		CheckIfLive(),
+		60000
+	);
+</script>
+<?php endif; ?>
+	
 	
 	
 <?php 
