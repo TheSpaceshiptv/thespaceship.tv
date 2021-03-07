@@ -1,4 +1,4 @@
-<?php get_header(); ?>  
+<?php get_header(); ?> 
 
 <?php WC()->cart->empty_cart(); ?>
 
@@ -120,4 +120,4 @@ endwhile; //end post loop
     
 get_footer(); 
     
-?>
+?> <!-- test -->
