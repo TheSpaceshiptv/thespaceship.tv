@@ -546,6 +546,9 @@ form.checkout.woocommerce-checkout {
 #payment .wc_payment_methods {
     display:block;
 }
+#eh-eh_stripe_pay-cc-form {
+    margin-left:12px;
+}
 .wc-stripe_cc-container input, .wc_payment_method input[type="radio"] {
     opacity: 1!important;
     filter: invert(100%) ;
