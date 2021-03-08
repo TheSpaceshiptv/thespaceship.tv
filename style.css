@@ -529,12 +529,6 @@ form.woocommerce-checkout  {
 #customer_details .woocommerce-form__input-checkbox:checked {
     filter: sepia(100%) hue-rotate(290deg) saturate(4);
 }
-#customer_details .woocommerce-form__input-checkbox {
-    width: 25%;
-    float: left;
-    margin-top: 10px;
-    filter: invert(100%);
-}
 body.woocommerce-checkout .site-footer ~ * {
     filter: invert(100%) hue-rotate(280deg) ;
 }
