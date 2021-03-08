@@ -822,3 +822,30 @@ body.woocommerce-account p button:hover {
     border:none;
 }
 
+
+
+
+
+/* CONTACT FORM *\
+\* ------------ */
+
+#gform_fields_1 input, #gform_fields_1 textarea {
+    filter: invert(100%);
+}
+
+.gform_wrapper input[type="submit"]{
+    float: right;
+    padding: 12px 20px;
+    font-size: 12px;
+    border: #E966C2 double;
+    border-radius: 10px;
+    background: black;
+    color: #B1C8C8;
+    transition: transform .3s, color .3s;
+}
+
+.gform_wrapper input[type="submit"]:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+}
