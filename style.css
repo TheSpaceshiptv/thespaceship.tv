@@ -537,6 +537,7 @@ body.woocommerce-checkout .site-footer ~ * {
 }
 #payment * {
     margin-left:0;
+    padding-left:0;
     list-style: none;
 }
 form.checkout.woocommerce-checkout {
