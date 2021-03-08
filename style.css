@@ -551,9 +551,8 @@ form.checkout.woocommerce-checkout {
     display:block;
 }
 #eh-eh_stripe_pay-cc-form {
-    padding-left:12px;
     padding-top:20px;
-    border-radius: 10px;
+    border:none;
 }
 #eh-eh_stripe_pay-cc-form > * {
     padding-bottom:20px;
