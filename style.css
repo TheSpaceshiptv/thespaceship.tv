@@ -549,6 +549,7 @@ form.checkout.woocommerce-checkout {
 .wc-stripe_cc-container input, .wc_payment_method input[type="radio"] {
     opacity: 1!important;
     filter: invert(100%) ;
+    margin-right:10px;
 }
 .wc-stripe_cc-container input:checked, .wc_payment_method input[type="radio"]:checked {
     filter: sepia(100%) hue-rotate(290deg) saturate(4);
