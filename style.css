@@ -552,6 +552,16 @@ form.checkout.woocommerce-checkout {
 }
 #eh-eh_stripe_pay-cc-form {
     padding-left:12px;
+    padding-top:20px;
+}
+#eh-eh_stripe_pay-cc-form > * {
+    padding-bottom:20px;
+}
+.eh-stripe-elements-field {
+    filter: invert(1) contrast(.7) hue-rotate(62deg);
+    margin-top: 10px;
+    border-radius: 5px;
+    border: solid 2px black!important;
 }
 .wc-stripe_cc-container input, .wc_payment_method input[type="radio"] {
     opacity: 1!important;
@@ -634,6 +644,7 @@ form.checkout.woocommerce-checkout {
 .woocommerce-checkout .woocommerce-info {
     margin-bottom: 20px; 
 }
+
 @media only screen and (max-width:800px) {
     form.checkout {
         display:flex;
@@ -786,6 +797,9 @@ body.woocommerce-account p button:hover {
 .filter_shows a[href*="uncategorized"] {
     display:none;
 }
+
+
+
 
 /* FOOTER *\
 \* ------ */
