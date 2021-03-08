@@ -100,7 +100,11 @@ b, strong {
 .site-logo img { 
     position: relative;
     top: 5px; 
-  width: 300px;
+    width: 300px;
+    transition: filter 1s;
+}
+.site-logo img:hover {
+    filter: brightness(1.5);
 }
 .site-logo .logo-text { 
     display:block;
