@@ -114,6 +114,11 @@ b, strong {
     line-height: 30px;
 }
 @media only screen and (max-width: 600px) {
+    
+    .site-nav a { 
+        flex-direction: column;
+        place-items: flex-end;
+    }
     .site-nav .logo-text{
         font-size: 20px;
         line-height: inherit;
