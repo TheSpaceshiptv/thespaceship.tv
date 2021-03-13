@@ -121,6 +121,8 @@ b, strong {
     }
     .site-nav a {
         display: block;
+    }
+    .site-nav .site-logo {
         padding-bottom: 20px;
     }
 }
