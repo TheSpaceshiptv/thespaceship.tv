@@ -63,7 +63,7 @@ function GET($i) {
     if($i == 'start')       return implode(",",get_post_meta( get_the_ID(), 'start_time' ));
     if($i == 'end')         return implode(",",get_post_meta( get_the_ID(), 'end_time' ));
     if($i == 'cat')         return implode(",",get_post_meta( get_the_ID(), 'product_category' ));
-    if($i == 'now')         return gmdate("Y-m-d, G:i", (strtotime(date('Y-m-d, G:i')) - 21600));
+    if($i == 'now')         return gmdate("Y-m-d, G:i", (strtotime(date('Y-m-d, G:i')) - 18000));
     if($i == 'startf')      return strtotime(GET('start'));
     if($i == 'endf')        return strtotime(GET('end'));
     if($i == 'nowf')        return strtotime(GET('now'));

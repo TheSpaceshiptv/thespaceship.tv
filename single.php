@@ -18,8 +18,8 @@
 	    $late       = GET('late');
 	    $ontime     = GET('ontime');
 	    $loggedin   = is_user_logged_in();
-	    $admin	= current_user_can('administrator');
-	    $crew	= current_user_can('crew');
+	    $admin		= current_user_can('administrator');
+	    $crew		= current_user_can('crew');
 	?>
 
 	
