@@ -76,7 +76,7 @@ function GET($i) {
 
 
 function show_info() {
-    $date = GET('startf');
+    $times = get_times();
     if (has_post_thumbnail()){ 
         echo 
             '<img src="',
@@ -90,19 +90,19 @@ function show_info() {
             rand(1,5) ,
             '.jpg">'; 
     }
-    if(GET('early')) echo '<div class="early-text">UPCOMING</div>';
-    if(!(GET('early') || GET('late'))) echo '<div class="early-text live-text">LIVE</div>';
+    if( $times->is_early ) echo '<div class="early-text">UPCOMING</div>';
+    if( $times->is_showtime ) echo '<div class="early-text live-text">LIVE</div>';
   
     echo
         '<div class="date-text">' .
-        date('M j', $date) .
+        date('M j', $times->start_timestamp ) .
         '</div>';
-    echo (GET('early') || GET('ontime')) ?
+    echo ( $times->is_early ) ?
         '<div class="time-text">' .
-        date('g:i A', $date) .
+        date('g:i A', $times->start_timestamp ) .
         '</div>' :
         '<div class="time-text">' .
-        date('Y', $date) .
+        date('Y', $times->start_timestamp ) .
         '</div>' ;
 }
 

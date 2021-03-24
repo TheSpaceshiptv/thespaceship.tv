@@ -31,7 +31,15 @@ if($is_cat):
     $prev_page = GET('siteurl') . $bang . $my_cat . '/' . ($my_page - 1);
 
     wp_reset_query(); 
-    $args = array( 'post_type' => 'product', 'posts_per_page' => $per_page, 'product_cat' => $my_cat, 'meta_key' => 'start_time', 'orderby' => 'meta_value', 'order' => 'DESC', 'offset' => $my_offset );
+    $args = array( 
+      'post_type' => 'product', 
+      'posts_per_page' => $per_page, 
+      'product_cat' => $my_cat, 
+      'meta_key' => 'start_time', 
+      'orderby' => 'meta_value', 
+      'order' => 'DESC', 
+      'offset' => $my_offset
+    );
 
 else:
 
@@ -45,26 +53,35 @@ else:
     $prev_page = GET('siteurl') . $bang . ($my_page - 1);
 
     wp_reset_query(); 
-    $args = array( 'post_type' => 'product', 'posts_per_page' => $per_page, 'product_cat' => $my_cat, 'meta_key' => 'start_time', 'orderby' => 'meta_value', 'order' => 'DESC', 'offset' => $my_offset );
+    $args = array( 
+      'post_type' => 'product', 
+      'posts_per_page' => $per_page, 
+      'product_cat' => $my_cat, 
+      'meta_key' => 'start_time', 
+      'orderby' => 'meta_value', 
+      'order' => 'DESC', 
+      'offset' => $my_offset 
+    );
 
 endif;
 
 $loop = new WP_Query( $args );
 $featured_active = false;
 
-while ( $loop->have_posts() ) : $loop->the_post(); global $product; 
+while ( $loop->have_posts() ) : $loop->the_post(); 
+  global $product; 
 
-$late = GET('late');
+  $times = get_times();
+  
+  if (!$featured_active && !$times->is_late):
+    echo "<div class=featured>";
+    $featured_active = true;
+  endif;
 
-if (!$featured_active && !$late):
-  echo "<div class=featured>";
-  $featured_active = true;
-endif;
-
-if ($featured_active && $late):
-  echo '</div> <!-- end featured section -->';
-  $featured_active = false;
-endif;
+  if ($featured_active && $times->is_late):
+    echo '</div> <!-- end featured section -->';
+    $featured_active = false;
+  endif;
 
 ?>
 
@@ -80,7 +97,6 @@ endif;
 
 <article class="site-card"> 
     <?php $notes = GET('notes'); ?>
-
 
     <a href="<?php echo GET('permalink')?>" class="aside show-info">
 		<?php show_info();?>
@@ -113,11 +129,11 @@ endif;
 		
 
         <a href="<?php echo GET('permalink')?>" class="card-button">
-            <?php if (GET('ontime')): echo 'LIVE NOW';
-            elseif (GET('bought') && GET('early')): echo 'WATCH SOON';
-            elseif (GET('bought')): echo 'WATCH NOW';
-            elseif ($product->get_price() == 0): echo 'WATCH FREE';
-            elseif (GET('late')): echo 'WATCH FOR $' . $product->get_price();
+            <?php if ( $times->is_showtime ): echo 'LIVE NOW';
+            elseif ( GET('bought') && $times->is_early ): echo 'WATCH SOON';
+            elseif ( GET('bought') ): echo 'WATCH NOW';
+            elseif ( $product->get_price() == 0): echo 'WATCH FREE';
+            elseif ( $times->is_late ): echo 'WATCH FOR $' . $product->get_price();
             else: echo '$' . $product->get_price() . ' TICKETS';
             endif; ?> 
             ⇨
@@ -129,7 +145,9 @@ endif;
 </article>
 
 
-<?php endwhile; ?>
+<?php 
+endwhile;
+?>
 
 
 <nav class="page-links">
