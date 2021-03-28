@@ -7,30 +7,12 @@ Version:        0.99
 */
 
 
-/* VARIABLES *\
-\* --------- */
-/* :root { 
-    --BG: url("assets/bg.jpg");   
-    --Glass: rgba(0, 0, 0, 0.75);     
-    --MainColor: #2ACEBB;
-    --AccentColor: #E966C2;     
-    --Dark: #191919;            
-    --Light: #B1C8C8; 
-    --gutter: 40px;
-    --cardgutter: calc(40px / 2);
-    --smallthumb: 80px;
-    --offset: -30px;
-    --offset2: 0px;
-} */
-
-
 /* TOP LEVEL *\
 \* --------- */
 ::-moz-selection { 
     color: #B1C8C8;
     background:  #E966C2;
-}
-  
+}  
 ::selection {
     color: #B1C8C8;
     background:  #E966C2;
@@ -76,6 +58,9 @@ b, strong {
     max-width: 1140px;
     margin: 0 auto;
 }
+
+
+
 
 /* HEADER *\
 \* ------ */
@@ -126,6 +111,8 @@ b, strong {
         padding-bottom: 20px;
     }
 }
+
+
 
 
 /* SITE CARD *\
@@ -190,9 +177,10 @@ b, strong {
 }
 
 
+
+
 /* HOME *\
 \* ---- */
-
 .home .site-card {
     max-width: 480px;
     grid: auto / 1fr 2fr;
@@ -289,6 +277,9 @@ b, strong {
     	flex:1;
     }
 }
+
+
+
 
 /* SINGLE PRODUCT *\
 \* -------------- */
@@ -445,6 +436,8 @@ b, strong {
         margin-top:50px;
     }
 }
+
+
 
 
 /* CHECKOUT *\
@@ -822,16 +815,8 @@ body.woocommerce-account p button:hover {
 
 
 
-
-
-
-
-
-
-
 /* MISC *\
 \* ---- */
-
 #wooot_order_tip_form button, #wooot_order_tip_form input {
     filter:invert(100%);
     padding:5px;
@@ -846,14 +831,11 @@ body.woocommerce-account p button:hover {
 
 
 
-
 /* CONTACT FORM *\
 \* ------------ */
-
 #gform_fields_1 input, #gform_fields_1 textarea {
     filter: invert(100%);
 }
-
 .gform_wrapper input[type="submit"]{
     float: right;
     padding: 12px 20px;
@@ -864,7 +846,6 @@ body.woocommerce-account p button:hover {
     color: #B1C8C8;
     transition: transform .3s, color .3s;
 }
-
 .gform_wrapper input[type="submit"]:hover {
     cursor: pointer;
     transform: scale(1.1);
