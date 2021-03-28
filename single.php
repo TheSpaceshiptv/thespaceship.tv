@@ -45,7 +45,7 @@ while ( have_posts() ): the_post();
 	<div class="sticky-container">
 
 	    <!-- CHAT -->
-	    <?php if ( $times->chat_open && ( $bought || $free || $admin || $crew ) ): ?> 
+	    <?php if ( $times->is_chat_open && ( $bought || $free || $admin || $crew ) ): ?> 
 	    <div class="site-chat"><iframe src="https://vimeo.com/live-chat/<?php echo GET('videoid'); ?>/" width="100%" height="100%" frameborder="0"></iframe></div>
 	    <?php endif; ?>
 
