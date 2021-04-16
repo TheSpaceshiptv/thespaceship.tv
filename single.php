@@ -125,9 +125,9 @@ while ( have_posts() ): the_post();
 	var ShowTime = new Date('<?php print $times->start_human; ?>');
 	function CheckIfShowtime() {
 		let CurrentTime = new Date().toLocaleString();
-	 	if(CurrentTime >= ShowTime) {
+	 	// if(CurrentTime >= ShowTime) {
 	 		location.reload();
-	 	}
+	 	// }
 	}
 	setInterval(
 		CheckIfShowtime(),
