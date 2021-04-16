@@ -75,7 +75,7 @@ while ( have_posts() ): the_post();
 
 
 
-	</div>        
+	</div>
     </div>
     <div class="main">
 		<h1><?php the_title(); ?></h1> 
@@ -100,21 +100,6 @@ while ( have_posts() ): the_post();
 	    <p>end transmission...</p>
 	    <?php endif; ?>
 
-<?php //delete this block:
-	// if($admin) {
-	// 	echo
-	// 		"<br> current human: " . $times->current_human .
-	// 		"<br> current timestamp: " . $times->current_timestamp .
-	// 		"<br> start human: " . $times->start_human .
-	// 		"<br> start timestamp: " . $times->start_timestamp .
-	// 		"<br> end human: " . $times->end_human .
-	// 		"<br> end timestamp: " . $times->end_timestamp .
-	// 		"<br> is chat open: " . $times->is_chat_open .
-	// 		"<br> is showtime: " . $times->is_showtime .
-	// 		"<br> is early: " . $times->is_early .
-	// 		"<br> is late: " . $times->is_late;
-	// }
-?>
 
     </div>
 
