@@ -120,7 +120,7 @@ while ( have_posts() ): the_post();
 
 	
 <!-- RELOAD IF SHOW GOES LIVE -->
-<?php if( $times->is_early && ( $bought || $free || $admin || $crew ) ): ?>
+<?php if( $times->is_chat_open && ( $bought || $free || $admin || $crew ) ): ?>
 <script>
 	var IsShowtime;
 	function CheckIfShowtime() {
@@ -130,7 +130,7 @@ while ( have_posts() ): the_post();
 	 	}
 	}
 	setInterval(
-		CheckIfLive(),
+		CheckIfShowtime(),
 		1000
 	);
 </script>
