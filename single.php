@@ -122,12 +122,10 @@ while ( have_posts() ): the_post();
 <!-- RELOAD IF SHOW GOES LIVE -->
 <?php if( $times->is_early && ( $bought || $free || $admin || $crew ) ): ?>
 <script>
-	var ShowTime = new Date('<?php print $times->start_human; ?>');
-	var CurrentTime = new Date().toLocaleString();
 	function CheckIfLive() {
-		if(CurrentTime >= ShowTime) {
-			location.reload();
-		}
+		let ShowTime = new Date('<?php print $times->start_human; ?>');
+		let CurrentTime = new Date().toLocaleString();
+		if(CurrentTime >= ShowTime) { location.reload(); }
 	}
 	setInterval(
 		CheckIfLive(),
