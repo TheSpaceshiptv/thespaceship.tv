@@ -50,7 +50,7 @@ while ( have_posts() ): the_post();
 			"\n is chat open: " . $times->is_chat_open .
 			"\n is showtime: " . $times->is_showtime .
 			"\n is early: " . $times->is_early .
-			"\n is late: " . $times->is_late
+			"\n is late: " . $times->is_late;
 
 	}
 
