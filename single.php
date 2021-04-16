@@ -38,21 +38,7 @@ while ( have_posts() ): the_post();
 	)
 	*/
 
-	//delete this block:
-	if($admin) {
-		echo
-			"\n current human: " . $times->current_human .
-			"\n current timestamp: " . $times->current_timestamp .
-			"\n start human: " . $times->start_human .
-			"\n start timestamp: " . $times->start_timestamp .
-			"\n end human: " . $times->end_human .
-			"\n end timestamp: " . $times->end_timestamp .
-			"\n is chat open: " . $times->is_chat_open .
-			"\n is showtime: " . $times->is_showtime .
-			"\n is early: " . $times->is_early .
-			"\n is late: " . $times->is_late;
 
-	}
 
 	?>
 
@@ -113,6 +99,22 @@ while ( have_posts() ): the_post();
 	    <?php echo convert( implode( ",",get_post_meta( get_the_ID(), 'show_notes' ) ) ); ?>
 	    <p>end transmission...</p>
 	    <?php endif; ?>
+
+<?php //delete this block:
+	if($admin) {
+		echo
+			"<br> current human: " . $times->current_human .
+			"<br> current timestamp: " . $times->current_timestamp .
+			"<br> start human: " . $times->start_human .
+			"<br> start timestamp: " . $times->start_timestamp .
+			"<br> end human: " . $times->end_human .
+			"<br> end timestamp: " . $times->end_timestamp .
+			"<br> is chat open: " . $times->is_chat_open .
+			"<br> is showtime: " . $times->is_showtime .
+			"<br> is early: " . $times->is_early .
+			"<br> is late: " . $times->is_late;
+	}
+?>
 
     </div>
 
