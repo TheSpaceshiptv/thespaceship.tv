@@ -1,12 +1,12 @@
 <?php 
 
-
 get_header(); 
 
 WC()->cart->empty_cart(); 
 
 while ( have_posts() ): the_post();
-	?>
+
+?>
 
 <article class="site-card"> 
     <?php 
@@ -37,6 +37,22 @@ while ( have_posts() ): the_post();
 	    [is_late] => 
 	)
 	*/
+
+	//delete this block:
+	if($admin) {
+		echo
+			"\n current human: " . $times->current_human .
+			"\n current timestamp: " . $times->current_timestamp .
+			"\n start human: " . $times->start_human .
+			"\n start timestamp: " . $times->start_timestamp .
+			"\n end human: " . $times->end_human .
+			"\n end timestamp: " . $times->end_timestamp .
+			"\n is chat open: " . $times->is_chat_open .
+			"\n is showtime: " . $times->is_showtime .
+			"\n is early: " . $times->is_early .
+			"\n is late: " . $times->is_late
+
+	}
 
 	?>
 
