@@ -122,10 +122,10 @@ while ( have_posts() ): the_post();
 <!-- RELOAD IF SHOW GOES LIVE -->
 <?php if( $times->is_chat_open && ( $bought || $free || $admin || $crew ) ): ?>
 <script>
-	var IsShowtime;
+	var ShowTime = new Date('<?php print $times->start_human; ?>');
 	function CheckIfShowtime() {
-		IsShowtime = <?php print $times->is_showtime ?>;
-	 	if(IsShowtime) {
+		let CurrentTime = new Date().toLocaleString();
+	 	if(CurrentTime >= ShowTime) {
 	 		location.reload();
 	 	}
 	}
