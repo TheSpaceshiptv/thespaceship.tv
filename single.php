@@ -120,7 +120,7 @@ while ( have_posts() ): the_post();
 
 	
 <!-- RELOAD IF SHOW GOES LIVE -->
-<?php if( $times->is_early && $times->ischat_open && ( $bought || $free || $admin || $crew ) ): ?>
+<?php if( $times->is_early && $times->is_chat_open && ( $bought || $free || $admin || $crew ) ): ?>
 <script>
 	var ShowTime = new Date('<?php print $times->start_human; ?>');
 	function CheckIfShowtime() {
