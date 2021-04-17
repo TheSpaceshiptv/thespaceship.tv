@@ -379,7 +379,7 @@ b, strong {
 }
 .site-chat {   
     filter: invert(100%) grayscale(100%) contrast(.95);
-    min-height: 200px;
+    min-height: 600px;
     height: calc(100vh - 280px);
     border-radius: 10px;
     overflow: hidden;
