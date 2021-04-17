@@ -157,7 +157,7 @@ function get_times() {
     $times->is_showtime = $times->current_timestamp >= ( $times->start_timestamp ) && $times->current_timestamp <+ ( $times->end_timestamp );
 
     // boolean for if it's before show starts
-    $times->is_early = $times->current_timestamp <= $times->start_timestamp;
+    $times->is_early = $times->current_timestamp < $times->start_timestamp;
 
     // boolean for if it's after show ends
     $times->is_late = $times->current_timestamp >= $times->end_timestamp;
