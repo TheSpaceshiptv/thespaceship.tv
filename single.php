@@ -107,7 +107,7 @@ while ( have_posts() ): the_post();
 <!-- RELOAD IF SHOW GOES LIVE -->
 <?php if( $times->is_early && $times->is_chat_open && ( $bought || $free || $admin || $crew ) ): ?>
 <script>
-	var TimeLeft = <?php print $times->start_timestamp; ?> - <?php print $times->current_timestamp; ?> * 1000;
+	var TimeLeft = <?php print $times->start_timestamp; ?> - <?php print $times->current_timestamp; ?> * 1;
 	setInterval(
 		function(){location.reload();},
 		TimeLeft
