@@ -47,7 +47,7 @@ while ( have_posts() ): the_post();
 	<div class="sticky-container">
 
 	    <!-- CHAT -->
-	    <?php if ( ($times->is_showtime || $times->is_early) && ( $bought || $free || $admin || $crew ) ): ?> 
+	    <?php if ( ($times->is_chat_open) && ( $bought || $free || $admin || $crew ) ): ?> 
 	    <div class="site-chat"><iframe src="https://vimeo.com/live-chat/<?php echo GET('videoid'); ?>/<?php echo GET('chatid'); ?>" width="100%" height="100%" frameborder="0"></iframe></div>
 	    <?php endif; ?>
 
@@ -55,7 +55,7 @@ while ( have_posts() ): the_post();
 	    <?php if ( $free || $bought || $admin || $crew ): else: the_content(); endif; ?>
 
 	    <!-- RIGHT COLUMN SHOW NOTES -->
-	    <?php if ( $times->is_late && ($bought || $free || $admin || $crew)): ?>
+	    <?php if ( ($times->is_late || $times->is_early) && !($times->is_chat_open) && ($bought || $free || $admin || $crew)): ?>
 	    <div class="side-notes">
 		    <?php
 		    $terms = get_the_terms($product->ID, 'product_cat');
@@ -87,7 +87,7 @@ while ( have_posts() ): the_post();
 
 
 		<!-- LEFT COLUMN SHOW NOTES -->
-		<?php if ( ($times->is_showtime || $times->is_early) || !( $bought || $free || $admin || $crew ) ): 
+		<?php if ( ($times->is_chat_open) || !( $bought || $free || $admin || $crew ) ): 
 	    $terms = get_the_terms($product->ID, 'product_cat');
 	    foreach ($terms as $term) {
 			$product_cat = $term->name;
