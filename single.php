@@ -108,7 +108,7 @@ while ( have_posts() ): the_post();
 <?php if( $times->is_early && $times->is_chat_open && ( $bought || $free || $admin || $crew ) ): ?>
 <script>
 	var TimeLeft = (<?php print $times->start_timestamp; ?> - <?php print $times->current_timestamp; ?>) * 1000;
-	setInterval(
+	setTimeout(
 		function(){
 			document.getElementById("replace").textContent="LIVE";
 			document.getElementById("replace").classList.add("live-text");
