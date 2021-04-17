@@ -103,7 +103,7 @@ while ( have_posts() ): the_post();
 
     </div>
 
-	
+
 <!-- RELOAD IF SHOW GOES LIVE -->
 <?php if( $times->is_early && $times->is_chat_open && ( $bought || $free || $admin || $crew ) ): ?>
 <script>
@@ -120,13 +120,13 @@ while ( have_posts() ): the_post();
 	);
 </script>
 <?php endif; ?>
-	
-	
-	
+
+
+
 <?php 
-	
+
 endwhile; //end post loop
-    
+
 get_footer(); 
-    
-?> <!-- test -->
+
+?> 
