@@ -109,7 +109,10 @@ while ( have_posts() ): the_post();
 <script>
 	var TimeLeft = (<?php print $times->start_timestamp; ?> - <?php print $times->current_timestamp; ?>) * 1000;
 	setInterval(
-		function(){location.reload();},
+		function(){
+			document.getElementById("replace").textContent="LIVE";
+			document.getElementById("replace").classList.add("live-text");
+		},
 		TimeLeft
 	);
 </script>

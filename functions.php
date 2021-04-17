@@ -91,7 +91,7 @@ function show_info() {
             rand(1,5) ,
             '.jpg">'; 
     }
-    if( $times->is_early ) echo '<div class="early-text">UPCOMING</div>';
+    if( $times->is_early ) echo '<div class="early-text" id="replace">UPCOMING</div>';
     if( $times->is_showtime ) echo '<div class="early-text live-text">LIVE</div>';
   
     echo
