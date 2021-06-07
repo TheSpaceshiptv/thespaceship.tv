@@ -49,7 +49,6 @@ while ( have_posts() ): the_post();
 		<?php 
 		
 		$notes = GET('notes'); 
-		$notes = convert($notes);
 
 		?>
 
