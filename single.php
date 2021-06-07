@@ -46,7 +46,11 @@ while ( have_posts() ): the_post();
 	<div class="show-info"><?php show_info(); ?></div>
 	<div class="sticky-container">
 
-		<?php $notes = GET('notes'); ?>
+		<?php 
+		
+		$notes = GET('notesf'); 
+
+		?>
 
 	    <!-- CHAT -->
 	    <?php if ( ($times->is_chat_open) && ( $bought || $free || $admin || $crew ) ): ?> 
