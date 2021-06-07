@@ -78,6 +78,9 @@ while ( have_posts() ): the_post();
 	</div>
     </div>
     <div class="main">
+
+		<?php $notes = GET('notes'); ?>
+
 		<h1><?php the_title(); ?></h1> 
 
 		<!-- PLAYER-->
@@ -96,7 +99,7 @@ while ( have_posts() ): the_post();
 	    }
 	    ?>
 	    <p>...start transmission</p>
-	    <?php echo convert( implode( ",",get_post_meta( get_the_ID(), 'show_notes' ) ) ); ?>
+	    <?php echo $notes; ?>
 	    <p>end transmission...</p>
 	    <?php endif; ?>
 
