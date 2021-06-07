@@ -61,7 +61,7 @@ function GET($i) {
     if($i == 'sitename')    return bloginfo('name');
     if($i == 'videoid')     return get_post_meta( get_the_ID(), 'vimeo_id', 1);
     if($i == 'chatid')     return get_post_meta( get_the_ID(), 'chat_id', 1);
-    if($i == 'notes')       return get_post_meta( get_the_ID(), 'show_notes', 1);
+    if($i == 'notes')       return convert(get_post_meta( get_the_ID(), 'show_notes', 1));
     if($i == 'start')       return get_post_meta( get_the_ID(), 'start_time', 1);
     if($i == 'end')         return get_post_meta( get_the_ID(), 'end_time', 1);
     if($i == 'cat')         return implode(",",get_post_meta( get_the_ID(), 'product_category' ));
@@ -111,7 +111,7 @@ function show_info() {
 function convert($input) {
     $pattern = '@(http(s)?://)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)@';
     return $output = preg_replace($pattern, '<a href="http$2://$3">$0</a>', $input);
-}
+}is 
 
 
 add_filter('add_to_cart_redirect', 'lw_add_to_cart_redirect');
