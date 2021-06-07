@@ -48,7 +48,7 @@ while ( have_posts() ): the_post();
 
 		<?php 
 		
-		$notes = makeClickableLinks(GET('notes')); 
+		$notes = GET('notes'); 
 
 		?>
 
