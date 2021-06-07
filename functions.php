@@ -112,7 +112,7 @@ function show_info() {
 function convert($input) {
     $pattern = '@(http(s)?://)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)@';
     return $output = preg_replace($pattern, '<a href="http$2://$3">$0</a>', $input);
-}is 
+}
 
 
 add_filter('add_to_cart_redirect', 'lw_add_to_cart_redirect');
