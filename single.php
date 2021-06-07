@@ -48,7 +48,8 @@ while ( have_posts() ): the_post();
 
 		<?php 
 		
-		$notes = GET('notesf'); 
+		$notes = GET('notes'); 
+		$notes = convert($notes);
 
 		?>
 

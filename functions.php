@@ -62,7 +62,7 @@ function GET($i) {
     if($i == 'videoid')     return get_post_meta( get_the_ID(), 'vimeo_id', 1);
     if($i == 'chatid')      return get_post_meta( get_the_ID(), 'chat_id', 1);
     if($i == 'notes')       return get_post_meta( get_the_ID(), 'show_notes', 1);
-    if($i == 'notesf')      return convert(GET('notes'));
+    //if($i == 'notesf')      return convert(GET('notes'));
     if($i == 'start')       return get_post_meta( get_the_ID(), 'start_time', 1);
     if($i == 'end')         return get_post_meta( get_the_ID(), 'end_time', 1);
     if($i == 'cat')         return implode(",",get_post_meta( get_the_ID(), 'product_category' ));
