@@ -73,8 +73,9 @@ while ( have_posts() ): the_post();
 		    if (!$loggedin): ?>
 		    <p><i>Enjoying the show? Consider <?php echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' ); ?> to catch our latest live shows!</i></p>
 		    <?php endif; ?>
+			<a class="donate button" href="<?php echo GET('siteurl'); ?>/checkout/?add-to-cart=1954">Donate</a>
 		    <p>...start transmission</p>
-	    	<?php echo $notes; ?>
+	    	<?php echo make_links_clickable($notes); ?>
 		    <p>end transmission...</p>
 	    </div>
 	    <?php endif; ?>
