@@ -46,6 +46,8 @@ while ( have_posts() ): the_post();
 	<div class="show-info"><?php show_info(); ?></div>
 	<div class="sticky-container">
 
+		<?php $notes = GET('notes'); ?>
+
 	    <!-- CHAT -->
 	    <?php if ( ($times->is_chat_open) && ( $bought || $free || $admin || $crew ) ): ?> 
 	    <div class="site-chat"><iframe src="https://vimeo.com/live-chat/<?php echo GET('videoid'); ?>/<?php echo GET('chatid'); ?>" width="100%" height="100%" frameborder="0"></iframe></div>
@@ -68,7 +70,7 @@ while ( have_posts() ): the_post();
 		    <p><i>Enjoying the show? Consider <?php echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' ); ?> to catch our latest live shows!</i></p>
 		    <?php endif; ?>
 		    <p>...start transmission</p>
-		    <?php echo convert(implode(",",get_post_meta( get_the_ID(), 'show_notes' ))); ?>
+		    <?php echo $notes; ?>
 		    <p>end transmission...</p>
 	    </div>
 	    <?php endif; ?>
@@ -78,8 +80,6 @@ while ( have_posts() ): the_post();
 	</div>
     </div>
     <div class="main">
-
-		<?php $notes = GET('notes'); ?>
 
 		<h1><?php the_title(); ?></h1> 
 
