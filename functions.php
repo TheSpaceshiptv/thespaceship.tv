@@ -138,7 +138,7 @@ function woocommerce_custom_single_add_to_cart_text() {
  */
 function wc_hide_selected_terms( $terms, $taxonomies, $args ) {
     $new_terms = array();
-    if ( in_array( 'product_cat', $taxonomies ) && !is_admin() && is_shop() ) {
+    if ( in_array( 'product_cat', $taxonomies ) ) {
         foreach ( $terms as $key => $term ) {
               if ( ! in_array( $term->slug, array( 'uncategorized' ) ) ) {
                 $new_terms[] = $term;
