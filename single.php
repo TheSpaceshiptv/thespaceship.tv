@@ -73,23 +73,9 @@ while ( have_posts() ): the_post();
 		    if (!$loggedin): ?>
 		    <p><i>Enjoying the show? Consider <?php echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' ); ?> to catch our latest live shows!</i></p>
 		    <?php endif; ?>
-			<p>Enjoying the show? <a class="donate button" href="<?php echo GET('siteurl'); ?>/checkout/?add-to-cart=1954">Click Here</a> to donate</p>
+			<p><a class="donate button" href="<?php echo GET('siteurl'); ?>/checkout/?add-to-cart=1954">Click Here</a> to donate</p>
 		    <p>...start transmission</p>
-	    	<?php 
-			
-			$func = function ($match) {
-			
-				$text   = trim($match[0]);
-				$pieces = parse_url($text);
-				$scheme = array_key_exists('scheme', $pieces) ? $pieces['scheme'] : 'http';
-				$host   = isset($pieces['host']) ? $pieces['host'] : $pieces['path'];
-				$link   = sprintf('%s://%s', $scheme, $host);
-			
-				return sprintf('<a href="%s">%s</a>', $link, $text);
-			};
-			
-			echo preg_replace_callback('/((http[s]?:\/\/)?(?>[a-z\-0-9]{2,}\.){1,}[a-z]{2,8})(?:\s|\/)/m', $func, $notes);
-			?>
+	    	<?php echo make_links_clickable($notes); ?>
 		    <p>end transmission...</p>
 	    </div>
 	    <?php endif; ?>
