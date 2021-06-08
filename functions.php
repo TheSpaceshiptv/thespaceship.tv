@@ -78,7 +78,7 @@ function GET($i) {
 
 
 function make_links_clickable($text){
-    return preg_replace('[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+(\.)[a-z]+[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+', '<a href="$1">$1</a>', $text);
+    return preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1">$1</a>', $text);
 }
 
 function show_info() {
@@ -114,7 +114,7 @@ function show_info() {
 
 
 function convert($input) {
-    $pattern = '(http(s)?:\/\/)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)';
+    $pattern = '(http(s)?://)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)';
     return $output = preg_replace($pattern, '<a href="http$2://$3">$0</a>', $input);
 }
 
