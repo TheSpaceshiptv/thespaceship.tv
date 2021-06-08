@@ -35,7 +35,7 @@ if($is_cat):
       'post_type' => 'product', 
       'posts_per_page' => $per_page, 
       'product_cat' => $my_cat, 
-      'exclude' => '40',
+      'category__not_in' => array( 40, 41 ),
       'meta_key' => 'start_time', 
       'orderby' => 'meta_value', 
       'order' => 'DESC', 
