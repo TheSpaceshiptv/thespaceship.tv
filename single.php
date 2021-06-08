@@ -75,7 +75,20 @@ while ( have_posts() ): the_post();
 		    <?php endif; ?>
 			<p><a class="donate button" href="<?php echo GET('siteurl'); ?>/checkout/?add-to-cart=1954">Click Here</a> to donate</p>
 		    <p>...start transmission</p>
-	    	<?php echo make_links_clickable($notes); ?>
+	    	<?php 
+			$func = function ($match) {
+
+    $text   = trim($match[0]);
+    $pieces = parse_url($text);
+    $scheme = array_key_exists('scheme', $pieces) ? $pieces['scheme'] : 'http';
+    $host   = isset($pieces['host']) ? $pieces['host'] : $pieces['path'];
+    $link   = sprintf('%s://%s', $scheme, $host);
+
+    return sprintf('<a href="%s">%s</a>', $link, $text);
+};
+
+echo preg_replace_callback('[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+(\.)[a-z]+[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+', $func, $test);
+			?>
 		    <p>end transmission...</p>
 	    </div>
 	    <?php endif; ?>
