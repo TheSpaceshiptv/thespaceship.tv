@@ -78,7 +78,7 @@ function GET($i) {
 
 
 function make_links_clickable($text){
-    return preg_replace('a', '<a href="$1">$1</a>', $text);
+    return preg_replace('/[^ ]+/gm', '<a href="$1">$1</a>', $text);
 }
 
 function show_info() {
