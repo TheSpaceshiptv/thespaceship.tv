@@ -133,26 +133,7 @@ function woocommerce_custom_single_add_to_cart_text() {
     return __( 'Buy Now', 'woocommerce' ); 
 }
 
-if( !function_exists( 'ywcca_add_product_categories_args')) {
-	add_filter( 'ywcca_wc_product_categories_widget_args', 'ywcca_add_product_categories_args', 10, 1 );
 
-	function ywcca_add_product_categories_args( $args ) {
-
-		$uncategorized = get_categories( array( 'taxonomy' => 'product_cat', 'slug' => 'uncategorized' ) );
-
-		if ( $uncategorized ) {
-
-			$excluded_id = array();
-
-			foreach ( $uncategorized as $category ) {
-				$excluded_id[] = $category->term_id;
-			}
-			$args['exclude'] = $excluded_id;
-		}
-
-		return $args;
-	}
-}
 
 // a function to get the times for an event and do a bunch of calculation/evaluation
 function get_times() {
