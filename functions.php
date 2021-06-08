@@ -78,7 +78,7 @@ function GET($i) {
 
 
 function make_links_clickable($text){
-    return preg_replace('((http[s]?:\/\/)?(?>[a-z\-0-9]{2,}\.){1,}[a-z]{2,8})(?:\s|\/)', '<a href="$1">$1</a>', $text);
+    return preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1">$1</a>', $text);
 }
 
 function show_info() {
@@ -111,6 +111,7 @@ function show_info() {
         date('Y', $times->start_timestamp ) .
         '</div>' ;
 }
+/((http[s]?:\/\/)?(?>[a-z\-0-9]{2,}\.){1,}[a-z]{2,8})(?:\s|\/)/m
 
 function convert($input) {
     $pattern = '(http(s)?://)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)';
