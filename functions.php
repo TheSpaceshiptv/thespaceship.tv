@@ -78,7 +78,7 @@ function GET($i) {
 
 
 function make_links_clickable($text){
-    return preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1">$1</a>', $text);
+    return preg_replace('@(http(s)?://)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)@', '<a href="$1">$1</a>', $text);
 }
 
 function show_info() {
@@ -119,18 +119,25 @@ function convert($input) {
 }
 
 
-add_filter('add_to_cart_redirect', 'lw_add_to_cart_redirect');
-function lw_add_to_cart_redirect() {
-    global $woocommerce;
-    $lw_redirect_checkout = $woocommerce->cart->get_checkout_url();
-    return $lw_redirect_checkout;
-}
-
 
 // To change add to cart text on single product page
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
 function woocommerce_custom_single_add_to_cart_text() {
     return __( 'Buy Now', 'woocommerce' ); 
+}
+
+
+
+add_action('pre_get_posts', 'wpa_44672' );
+function wpa_44672( $wp_query ) {
+    //$wp_query is passed by reference.  we don't need to return anything. whatever changes made inside this function will automatically effect the global variable
+    $excluded = array(4);  //made it an array in case you  need to exclude more than one
+    // only exclude on the home page
+    if( is_home() ) {
+        set_query_var('category__not_in', $excluded);
+        //which is merely the more elegant way to write:
+        //$wp_query->set('category__not_in', $excluded);
+    }
 }
 
 
