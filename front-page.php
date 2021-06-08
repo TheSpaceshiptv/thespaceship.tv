@@ -14,7 +14,7 @@ endif;
 
 
 
-$per_page = '10';
+$per_page = '14';
 $is_cat = ( strpos($after_bang, '/') !== false ) ? true : false;
 
 if($is_cat):
