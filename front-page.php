@@ -56,7 +56,7 @@ else:
     $args = array( 
       'post_type' => 'product', 
       'posts_per_page' => $per_page, 
-      'product_cat' => '$my_cat', 
+      'product_cat' => $my_cat, 
       'meta_key' => 'start_time', 
       'orderby' => 'meta_value', 
       'order' => 'DESC', 
@@ -210,8 +210,6 @@ echo '<nav class="filter_shows"><a href="' . GET('siteurl') .'"' . (($is_cat) ? 
 echo '<a href="/contact">Contact Us</a>';
 echo '</nav>';
 ?>
-
-
 
 
 <?php wp_reset_query(); ?>
