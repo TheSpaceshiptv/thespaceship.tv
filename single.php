@@ -70,10 +70,10 @@ while ( have_posts() ): the_post();
 			$product_slug = $term->slug;
 			echo '<p><a href="' . GET('siteurl') . '/?/' . $product_slug . '/1">'. $product_cat . '</a></p>';
 		    }
-		    if (!$loggedin): ?>
-		    <p><i>Enjoying the show? Consider <?php echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' ); ?> to catch our latest live shows!</i></p>
-		    <?php endif; ?>
-			<p><a class="donate button" href="<?php echo GET('siteurl'); ?>/checkout/?add-to-cart=1954">Click Here</a> to donate</p>
+			
+			call_to_action();
+			?>
+			
 		    <p>...start transmission</p>
 	    	<?php 
 			
@@ -108,9 +108,16 @@ while ( have_posts() ): the_post();
 			$product_slug = $term->slug;
 			echo '<p><a href="' . GET('siteurl') . '/?/' . $product_slug . '/1">'. $product_cat . '</a></p>';
 	    }
+
+		if($bought || $free || $admin || $crew) { call_to_action(); }
+
 	    ?>
 	    <p>...start transmission</p>
-		<?php linkify($notes); ?>
+		<?php 	
+			$notes = scrubLinkPrefix($notes);
+			$notes = makeClickableLinks($notes);
+			echo $notes;
+		?>
 	    <p>end transmission...</p>
 	    <?php endif; ?>
 

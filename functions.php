@@ -62,7 +62,7 @@ function GET($i) {
     if($i == 'videoid')     return get_post_meta( get_the_ID(), 'vimeo_id', 1);
     if($i == 'chatid')      return get_post_meta( get_the_ID(), 'chat_id', 1);
     if($i == 'notes')       return get_post_meta( get_the_ID(), 'show_notes', 1);
-    //if($i == 'notesf')      return convert(GET('notes'));
+  
     if($i == 'start')       return get_post_meta( get_the_ID(), 'start_time', 1);
     if($i == 'end')         return get_post_meta( get_the_ID(), 'end_time', 1);
     if($i == 'cat')         return implode(",",get_post_meta( get_the_ID(), 'product_category' ));
@@ -84,10 +84,6 @@ function makeClickableLinks($s) {
     return preg_replace('@(([a-z,0-9,\-,\_]+)(\.)([^\ ,\<,\>,\n,\r]+)[^\.,\ ,\<, \>, \n, \r])@', '<a href="http://$1" target="_blank">$1</a>', $s);
   }
 
-
-function make_links_clickable($text){
-    return preg_replace('!(((ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1">$1</a>', $text);
-}
 
 function show_info() {
     $times = get_times();
@@ -120,12 +116,17 @@ function show_info() {
         '</div>' ;
 }
 
-
-function convert($input) {
-    $pattern = '(http(s)?://)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)';
-    return $output = preg_replace($pattern, '<a href="http$2://$3">$0</a>', $input);
+function call_to_action(){
+    echo '<p><i>Enjoying the show? Consider ';
+    if (!$loggedin):
+    echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' );
+    echo 'to catch our latest live shows!</i></p>'
+    else:
+    echo '<a class="donate button" href="'; 
+    echo GET('siteurl'); 
+    echo '/checkout/?add-to-cart=1954">Donating Now</a> to help support future shows.</i></p>';
+    endif; 
 }
-
 
 
 // To change add to cart text on single product page
