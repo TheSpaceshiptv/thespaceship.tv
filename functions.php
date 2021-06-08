@@ -1,7 +1,7 @@
 <?php
 
 function make_links_clickable($text){
-    return preg_replace('([^ ])', '<a href="$1">$1</a>', $text);
+    return preg_replace('[a-z]+', '<a href="$1">$1</a>', $text);
 }
 
 
