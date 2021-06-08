@@ -104,7 +104,7 @@ while ( have_posts() ): the_post();
 	    }
 	    ?>
 	    <p>...start transmission</p>
-		<?php echo make_links_clickable($notes); ?>
+		<?php echo convert($notes); ?>
 	    <p>end transmission...</p>
 	    <?php endif; ?>
 
