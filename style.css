@@ -429,7 +429,7 @@ b, strong {
 .donate.button {
     float:right;
     padding: 10px;
-    margin:-20px 0 0 20px;
+    margin:0 0 20px 10px;
     border-radius: 10px;
     border: #E966C2 double;
     background: rgba(0, 0, 0, 0.75);
