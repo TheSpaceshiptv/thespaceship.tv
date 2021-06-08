@@ -1,8 +1,6 @@
 <?php
 
-
-
-// ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣶⡀⠀⠀⠀⠀
+// ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⢀⣴⣶⡀⠀⠀⠀⠀
 // ⠀⠀⠀⠀⠀⠀⠀⠀⢱⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣷⠀⠀⠀⠀
 // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣶⡀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣼⣿⣿⡏⢹⠀⠀⠀⠀
 // ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⡿⣻⣿⡷⣿⣿⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀
@@ -17,8 +15,6 @@
 // ⠀⠀⢀⢀⣠⣿⣿⣯⣭⣽⣿⡿⠛⠻⢿⣿⣯⣧⡨⣮⡶⡤⠢⠽⠽⠿⣿⣿⣷⣿
 // ⠀⠀⡨⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢷⣤⠉⢹⣯⣿⣜⣟⠊⠁⠀⣰⢶⣿⣿⣿⣿
 // ⠀⢼⢻⣿⣿⣿⣿⣿⣿⣿⣟⢹⣿⡿⡵⣴⡌⠋⡟⠿⠎⡓⠞⠏⠙⠉⣉⣄⣼⣶
-
-
 
 function custom_remove_all_quantity_fields( $return, $product ) {return true;}
 add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_fields', 10, 2 );
@@ -82,7 +78,7 @@ function scrubLinkPrefix($s) {
 }
 function makeClickableLinks($s) {
     return preg_replace('@(([a-z,0-9,\-,\_]+)(\.)([^\ ,\<,\>,\n,\r]+)[^\.,\ ,\<, \>, \n, \r])@', '<a href="http://$1" target="_blank">$1</a>', $s);
-  }
+}
 
 
 function show_info() {
@@ -117,15 +113,13 @@ function show_info() {
 }
 
 function call_to_action($i){
-    echo '<p><i>Enjoying the show? Consider ';
     if ($i) {
+    echo '<p><i>Enjoying the show? Consider ';
     echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' );
     echo ' to catch our latest live shows!</i></p>';
     } else {
-    echo '<a class="donate button" href="'; 
-    echo GET('siteurl'); 
-    echo '/checkout/?add-to-cart=1954">Donating Now</a> to help support future shows.</i></p>';
-    } 
+    echo '<a class="donate button" href="' . GET('siteurl') . '/checkout/?add-to-cart=1954">Donate Now ⇨</a>';
+    }
 }
 
 
@@ -206,7 +200,3 @@ function get_times() {
     // send the times back to the single template
     return $times;
 }
-
-
-
-
