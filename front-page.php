@@ -35,7 +35,6 @@ if($is_cat):
       'post_type' => 'product', 
       'posts_per_page' => $per_page, 
       'product_cat' => $my_cat, 
-      'category__not_in' => array( 40, 41 ),
       'meta_key' => 'start_time', 
       'orderby' => 'meta_value', 
       'order' => 'DESC', 
@@ -57,8 +56,8 @@ else:
     $args = array( 
       'post_type' => 'product', 
       'posts_per_page' => $per_page, 
-      'product_cat' => $my_cat, 
-      'category__not_in' => array( 40, 41 ),
+      'product_cat' => '$my_cat', 
+      'post__not_in' => array(1,3,5,40,41),
       'meta_key' => 'start_time', 
       'orderby' => 'meta_value', 
       'order' => 'DESC', 
