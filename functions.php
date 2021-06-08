@@ -140,7 +140,7 @@ function woocommerce_custom_single_add_to_cart_text() {
 add_action('pre_get_posts', 'wpa_44672' );
 function wpa_44672( $wp_query ) {
     //$wp_query is passed by reference.  we don't need to return anything. whatever changes made inside this function will automatically effect the global variable
-    $excluded = array(4);  //made it an array in case you  need to exclude more than one
+    $excluded = array(40);  //made it an array in case you  need to exclude more than one
     // only exclude on the home page
     if( is_home() ) {
         set_query_var('category__not_in', $excluded);
@@ -160,7 +160,7 @@ function custom_pre_get_posts_query( $q ) {
     $tax_query[] = array(
            'taxonomy' => 'product_cat',
            'field' => 'slug',
-           'terms' => array( 'clothing' ), // Don't display products in the clothing category on the shop page.
+           'terms' => array( 'uncategorized' ), // Don't display products in the clothing category on the shop page.
            'operator' => 'NOT IN'
     );
 
