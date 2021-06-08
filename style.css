@@ -426,6 +426,19 @@ b, strong {
 .single .main p a:hover { 
     color: #2ACEBB;
 }
+.donate.button {
+    float:right;
+    padding: 10px;
+    margin-bottom:30px;
+    border-radius: 10px;
+    border: #E966C2 double;
+    background: rgba(0, 0, 0, 0.75);
+    color: #B1C8C8;
+    transform: scale(1.1);
+}
+.donate.button:hover {
+    transition: transform .3s;
+}
 @media only screen and (max-width: 600px) {
     .single-product .site-card, .page .site-card {
         display:flex!important;
