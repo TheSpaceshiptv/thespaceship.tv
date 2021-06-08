@@ -78,7 +78,7 @@ function GET($i) {
 
   
 function scrubLinkPrefix($s) {
-    return preg_replace('@(https?:\/\/)@', '', $s);
+    return preg_replace('@(https?:\/\/)|(www\.)@', '', $s);
 }
 function makeClickableLinks($s) {
     return preg_replace('@(([a-z,0-9,\-,\_]+)(\.)([^\ ,\<,\>,\n,\r]+)[^\.,\ ,\<, \>, \n, \r])@', '<a href="http://$1" target="_blank">$1</a>', $s);
