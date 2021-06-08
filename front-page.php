@@ -57,7 +57,7 @@ else:
       'post_type' => 'product', 
       'posts_per_page' => $per_page, 
       'product_cat' => $my_cat, 
-      'category__not_in' => 40,
+      'post__not_in' => 40,
       'meta_key' => 'start_time', 
       'orderby' => 'meta_value', 
       'order' => 'DESC', 

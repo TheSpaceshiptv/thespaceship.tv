@@ -158,7 +158,7 @@ function get_subcategory_terms( $terms, $taxonomies, $args ) {
 	$hide_category 	= array( 40 ); // Ids of the category you don't want to display on the shop page
  	
  	  // if a product category and on the shop page
-	if ( in_array( 'product_cat', $taxonomies ) && !is_admin() && is_shop() ) {
+	if ( in_array( 'product_cat', $taxonomies ) && !is_admin() && is_home() ) {
 
 	    foreach ( $terms as $key => $term ) {
 
