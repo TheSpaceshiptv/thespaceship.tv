@@ -429,15 +429,15 @@ b, strong {
 .donate.button {
     float:right;
     padding: 10px;
-    margin-bottom:30px;
+    margin:0 0 10px 10px;
     border-radius: 10px;
     border: #E966C2 double;
     background: rgba(0, 0, 0, 0.75);
-    color: #B1C8C8;
-    transform: scale(1.1);
+    color: white!important;
+    transition: transform .3s;
 }
 .donate.button:hover {
-    transition: transform .3s;
+    transform: scale(1.1);
 }
 @media only screen and (max-width: 600px) {
     .single-product .site-card, .page .site-card {
