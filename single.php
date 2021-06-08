@@ -87,7 +87,7 @@ while ( have_posts() ): the_post();
     return sprintf('<a href="%s">%s</a>', $link, $text);
 };
 
-echo preg_replace_callback('[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+(\.)[a-z]+[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+', $func, $test);
+echo preg_replace_callback('/((http[s]?:\/\/)?(?>[a-z\-0-9]{2,}\.){1,}[a-z]{2,8})(?:\s|\/)/m', $func, $test);
 			?>
 		    <p>end transmission...</p>
 	    </div>
