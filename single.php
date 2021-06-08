@@ -75,7 +75,7 @@ while ( have_posts() ): the_post();
 		    <?php endif; ?>
 			<p><a class="donate button" href="<?php echo GET('siteurl'); ?>/checkout/?add-to-cart=1954">Click Here</a> to donate</p>
 		    <p>...start transmission</p>
-	    	<?php echo make_links_clickable($notes); ?>
+	    	<?php linkify($notes); ?>
 		    <p>end transmission...</p>
 	    </div>
 	    <?php endif; ?>
@@ -104,7 +104,7 @@ while ( have_posts() ): the_post();
 	    }
 	    ?>
 	    <p>...start transmission</p>
-		<?php echo make_links_clickable($notes); ?>
+		<?php linkify($notes); ?>
 	    <p>end transmission...</p>
 	    <?php endif; ?>
 

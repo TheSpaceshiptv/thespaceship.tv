@@ -76,6 +76,19 @@ function GET($i) {
     if($i == 'loggedin')    return is_user_logged_in();
 }
 
+function makeClickableLinks($s) {
+    return preg_replace('@(([a-z,0-9,\-,\_]+)(\.)([^\ ,\<,\>,\n,\r]+)[^\.,\ ,\<, \>, \n, \r])@', '<a href="http://$1" target="_blank">$1</a>', $s);
+  }
+  
+function scrubLinkPrefix($s) {
+    return preg_replace('@(https?:\/\/)@', '', $s);
+}
+
+function linkify($s) {
+    $output = scrubLinkPrefix($s);
+    $output = makeClickableLinks($s);
+    echo $output;
+}   
 
 function make_links_clickable($text){
     return preg_replace('!(((ht)tp(s)?://)[-a-zA-Zа-яА-Я()0-9@:%_+.~#?&;//=]+)!i', '<a href="$1">$1</a>', $text);
