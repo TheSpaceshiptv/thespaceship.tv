@@ -118,14 +118,14 @@ function show_info() {
 
 function call_to_action(){
     echo '<p><i>Enjoying the show? Consider ';
-    if (!$loggedin):
+    if (!$loggedin) {
     echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' );
     echo 'to catch our latest live shows!</i></p>';
-    else:
+    } else {
     echo '<a class="donate button" href="'; 
     echo GET('siteurl'); 
     echo '/checkout/?add-to-cart=1954">Donating Now</a> to help support future shows.</i></p>';
-    endif; 
+    } 
 }
 
 
