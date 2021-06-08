@@ -149,28 +149,6 @@ function wpa_44672( $wp_query ) {
     }
 }
 
-/**
- * Show products only of selected category.
- */
-function get_subcategory_terms( $terms, $taxonomies, $args ) {
- 
-	$new_terms 	= array();
-	$hide_category 	= array( 40 ); // Ids of the category you don't want to display on the shop page
- 	
- 	  // if a product category and on the shop page
-	if ( in_array( 'product_cat', $taxonomies ) && !is_admin() && is_home() ) {
-
-	    foreach ( $terms as $key => $term ) {
-
-		if ( ! in_array( $term->term_id, $hide_category ) ) { 
-			$new_terms[] = $term;
-		}
-	    }
-	    $terms = $new_terms;
-	}
-  return $terms;
-}
-add_filter( 'get_terms', 'get_subcategory_terms', 10, 3 );
 
 
 // a function to get the times for an event and do a bunch of calculation/evaluation
