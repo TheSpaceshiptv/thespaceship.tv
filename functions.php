@@ -133,22 +133,26 @@ function woocommerce_custom_single_add_to_cart_text() {
     return __( 'Buy Now', 'woocommerce' ); 
 }
 
-/** Remove categories from shop and other pages
- * in Woocommerce
- */
-function wc_hide_selected_terms( $terms, $taxonomies, $args ) {
-    $new_terms = array();
-    if ( in_array( 'product_cat', $taxonomies ) ) {
-        foreach ( $terms as $key => $term ) {
-              if ( ! in_array( $term->slug, array( 'uncategorized' ) ) ) {
-                $new_terms[] = $term;
-              }
-        }
-        $terms = $new_terms;
-    }
-    return $terms;
+if( !function_exists( 'ywcca_add_product_categories_args')) {
+	add_filter( 'ywcca_wc_product_categories_widget_args', 'ywcca_add_product_categories_args', 10, 1 );
+
+	function ywcca_add_product_categories_args( $args ) {
+
+		$uncategorized = get_categories( array( 'taxonomy' => 'product_cat', 'slug' => 'uncategorized' ) );
+
+		if ( $uncategorized ) {
+
+			$excluded_id = array();
+
+			foreach ( $uncategorized as $category ) {
+				$excluded_id[] = $category->term_id;
+			}
+			$args['exclude'] = $excluded_id;
+		}
+
+		return $args;
+	}
 }
-add_filter( 'get_terms', 'wc_hide_selected_terms', 10, 3 );
 
 // a function to get the times for an event and do a bunch of calculation/evaluation
 function get_times() {
