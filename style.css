@@ -429,13 +429,13 @@ b, strong {
 .donate.button {
     float:right;
     padding: 10px;
-    margin:0 0 10px 10px;
+    margin:0 0 20px 5px;
     border-radius: 10px;
     border: #E966C2 double;
     background: rgba(0, 0, 0, 0.75);
     color: white!important;
-    transition: transform .3s;
 }
+
 .donate.button:hover {
     transform: scale(1.1);
 }
