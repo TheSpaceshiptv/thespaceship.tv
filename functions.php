@@ -111,7 +111,7 @@ function show_info() {
         date('Y', $times->start_timestamp ) .
         '</div>' ;
 }
-/((http[s]?:\/\/)?(?>[a-z\-0-9]{2,}\.){1,}[a-z]{2,8})(?:\s|\/)/m
+
 
 function convert($input) {
     $pattern = '(http(s)?://)?(([a-zA-Z0-9])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])+(?=<)';
