@@ -657,6 +657,9 @@ form.checkout.woocommerce-checkout {
 .woocommerce-checkout .woocommerce-info {
     margin-bottom: 20px; 
 }
+.woocommerce-privacy-policy-text {
+    margin-top:-50px;
+}
 
 @media only screen and (max-width:800px) {
     form.checkout {
