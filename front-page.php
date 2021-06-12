@@ -79,7 +79,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
   endif;
 
   if ($featured_active && $times->is_late):
-    echo '</div> <!-- end featured section -->';
+    echo '</div> p <!-- end featured section -->';
     $featured_active = false;
   endif;
 
