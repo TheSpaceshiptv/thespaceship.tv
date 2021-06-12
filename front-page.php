@@ -73,15 +73,14 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
   $times = get_times();
   
-  if (!$featured_active && !$times->is_late):
+  if (!$featured_active && !$times->is_late) {
     echo "<div class=featured>";
     $featured_active = true;
-  endif;
-
-  if ($featured_active && $times->is_late):
+  } 
+  elseif ($featured_active && $times->is_late) {
     echo '</div>  <!-- end featured section -->';
     $featured_active = false;
-  endif;
+  }
 
 ?>
 
