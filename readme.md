@@ -16,7 +16,6 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 - add a pagination indicator
 - fix layout breaking when show ends before start
 - add error icon if show ends before start
-- donate button left column
 - discount scheduling calendar no display
 
 ## COMPLETED
@@ -24,3 +23,4 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 - create a link to donate product from all descriptions
 - make donate product hidden from main page
 - fix clickable links in product descriptions
+- donate button left column

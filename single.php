@@ -111,6 +111,7 @@ while ( have_posts() ): the_post();
 
 		if(($bought || $free || $admin || $crew) && ($times->is_late || $times->is_chat_open)) { call_to_action($loggedin); }
 
+		call_to_action(!$loggedin);
 	    ?>
 	    <p>...start transmission</p>
 		<?php 	
