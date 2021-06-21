@@ -23,4 +23,5 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 - create a link to donate product from all descriptions
 - make donate product hidden from main page
 - fix clickable links in product descriptions
-- donate button left column
+- add donate button left column
+- fix stripe fine text position on checkout
