@@ -662,6 +662,10 @@ form.checkout.woocommerce-checkout {
     display: none;
 }
 
+.woocommerce-privacy-policy-text {
+    padding-bottom: 69px;
+}
+
 @media only screen and (max-width:800px) {
     form.checkout {
         display:flex;
