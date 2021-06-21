@@ -658,6 +658,10 @@ form.checkout.woocommerce-checkout {
     margin-bottom: 20px; 
 }
 
+#eh-eh_stripe_pay-cc-form .stripe-source-errors, #eh-eh_stripe_pay-cc-form .clear {
+    display: none;
+}
+
 @media only screen and (max-width:800px) {
     form.checkout {
         display:flex;
