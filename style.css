@@ -658,7 +658,7 @@ form.checkout.woocommerce-checkout {
     margin-bottom: 20px; 
 }
 
-#eh-eh_stripe_pay-cc-form .stripe-source-errors, #eh-eh_stripe_pay-cc-form .clear {
+#eh-eh_stripe_pay-cc-form .clear {
     display: none;
 }
 
