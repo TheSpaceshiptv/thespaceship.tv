@@ -11,10 +11,10 @@ while ( have_posts() ): the_post();
 <article class="site-card"> 
     <?php 
 
-	if is_category( 'merch' ) {
-		the_content();
-	}
-	else { //start of not merch
+	// if is_category( 'merch' ) {
+	// 	the_content( )
+	// }
+	// else { //start of not merch
 
 		$free       = $product->get_price() == 0;
 		$bought     = wc_customer_bought_product(get_userdata(get_current_user_id())->user_email, get_current_user_id(), get_the_ID());
@@ -143,7 +143,7 @@ while ( have_posts() ): the_post();
 	</script>
 	<?php endif; ?>
 
-	<?php } // end of not merch ?> 
+	<!-- <?php } // end of not merch ?>  -->
 
 
 
