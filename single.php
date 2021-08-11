@@ -13,7 +13,7 @@ while ( have_posts() ): the_post();
     // do we need this? it's not doing anything, it's imploding a value and not outputting it or storing it or anything..
 	// implode(",",get_post_meta( get_the_ID(), 'show_tag' )); 
 
-	if (is_product_category('merch')) {
+	if (is_product_category('uncategorized')) {
 		the_content();
 	}
 	else { // start of not merch
