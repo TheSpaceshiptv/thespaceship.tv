@@ -10,7 +10,8 @@ while ( have_posts() ): the_post();
 
 <article class="site-card"> 
     <?php 
-
+    // do we need this? it's not doing anything, it's imploding a value and not outputting it or storing it or anything..
+	// implode(",",get_post_meta( get_the_ID(), 'show_tag' )); 
 
 	$free       = $product->get_price() == 0;
 	$bought     = wc_customer_bought_product(get_userdata(get_current_user_id())->user_email, get_current_user_id(), get_the_ID());
