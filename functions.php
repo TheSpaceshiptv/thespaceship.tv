@@ -154,7 +154,7 @@ function custom_pre_get_posts_query( $q ) {
     $tax_query[] = array(
            'taxonomy' => 'product_cat',
            'field' => 'slug',
-           'terms' => array( 'uncategorized' ), // Don't display products in the clothing category on the shop page.
+           'terms' => array( 'uncategorized' , 'hidden' ), // Don't display products in the clothing category on the shop page.
            'operator' => 'NOT IN'
     );
 
