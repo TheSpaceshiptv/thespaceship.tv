@@ -29,4 +29,4 @@
         <?php echo do_shortcode( '[xoo_el_action type="login" display="button" text="Login" change_to="myaccount" redirect_to="same"]' ); ?>
     </nav>
     
-    <main class="site-main">  
+    <main class="site-main"> 
