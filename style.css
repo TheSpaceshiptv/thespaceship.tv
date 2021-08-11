@@ -815,7 +815,7 @@ body.woocommerce-account p button:hover {
     color: #E966C2;
     padding-bottom:10px;
 }
-.filter_shows a[href*="uncategorized"] {
+.filter_shows a[href*="hidden"] {
     display:none;
 }
 
