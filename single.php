@@ -12,10 +12,17 @@ while ( have_posts() ): the_post();
 <?php
 	$terms = get_the_terms($product->ID, 'product_cat');
 	foreach ($terms as $term) {$product_cat = $term->name;}
-	echo $product_cat;
 			
 	if ($product_cat == 'Merch') {
-		echo 'hello world!';
+		
+		echo '<div class="aside"><div class="sticky-container">';
+		the_content();
+		echo '</div></div><div class="main"><h1>';
+		the_title();
+		echo '</h1>';
+		the_post_thumbnail( 'shop_single' );
+		echo '</div>'; 
+		
 	}
 	else { // start of not merch
 
