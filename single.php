@@ -18,7 +18,7 @@ if (is_array($cat_field)) {
 }
 $catinfo = get_category($cat_field);
 
-echo $catinfo->slug;
+echo $catinfo->slug; echo 'test';
 
 	if (false) {
 	}
