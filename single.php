@@ -20,7 +20,14 @@ while ( have_posts() ): the_post();
 		echo '</div></div><div class="main"><h1>';
 		the_title();
 		echo '</h1>';
-		the_post_thumbnail( 'large' );
+		
+		if ( $attachment_ids = $product->get_gallery_image_ids() ) {
+			foreach ( $attachment_ids as $attachment_id ) {
+				echo wc_get_gallery_image_html( $attachment_id );
+			}
+		}
+		
+
 		echo '</div>'; 
 		
 	}
