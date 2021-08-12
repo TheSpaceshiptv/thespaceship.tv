@@ -10,14 +10,11 @@ while ( have_posts() ): the_post();
 
 <article class="site-card"> 
 <?php
-		    $terms = get_the_terms($product->ID, 'product_cat');
-		    foreach ($terms as $term) {
-			$product_cat = $term->name;
-			echo $product_cat;
-		    }
-			echo $product_cat;
+	$terms = get_the_terms($product->ID, 'product_cat');
+	foreach ($terms as $term) {$product_cat = $term->name;}
 			
-	if (false) {
+	if ($product_cat == 'merch') {
+		echo 'hello world!';
 	}
 	else { // start of not merch
 
