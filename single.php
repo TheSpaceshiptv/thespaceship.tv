@@ -12,11 +12,9 @@ while ( have_posts() ): the_post();
     <?php 
 
 	
-if (GET('cat') == 'merch') {
-	echo 'test';
-} 
-echo GET('cat');
-	if (false) {
+
+	if (true) {
+		the_content( );
 	}
 	else { // start of not merch
 
