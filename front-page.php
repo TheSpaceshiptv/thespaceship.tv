@@ -47,8 +47,8 @@ else:
     $my_offset = $per_page * ($my_page - 1);
     $total_shows = (new WP_Query( array( 'post_type' => 'product', 'post_status' => 'publish', 'posts_per_page' => -1 ) ))->found_posts;
     $total_pages = ceil($total_shows / $per_page);
-    $first_page = ($my_page == 1) ;
-    $last_page = ($my_page == $total_pages) ;
+    $first_page = ($my_page == 1);
+    $last_page = ($my_page == $total_pages);
     $next_page = GET('siteurl') . $bang . ($my_page + 1);
     $prev_page = GET('siteurl') . $bang . ($my_page - 1);
 

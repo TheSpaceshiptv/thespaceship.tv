@@ -11,8 +11,14 @@ while ( have_posts() ): the_post();
 <article class="site-card"> 
     <?php 
 
-	if (get_the_terms($product->ID, 'product_cat') == '5') {
-		the_content();
+	if (true) {
+		$cat_field = get_field('category_test');
+		if (is_array($cat_field)) {
+			$cat_field = $cat_field[0];
+		}
+		$catinfo = get_category($cat_field);
+		
+		echo $catinfo->slug;
 	}
 	else { // start of not merch
 
