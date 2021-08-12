@@ -11,10 +11,9 @@ while ( have_posts() ): the_post();
 <article class="site-card"> 
     <?php 
 
-	
+	echo implode(",",get_post_meta( get_the_ID(), 'product_category' ));
 
-	if (true) {
-		the_content( );
+	if (false) {
 	}
 	else { // start of not merch
 
