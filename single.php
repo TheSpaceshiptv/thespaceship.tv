@@ -12,14 +12,10 @@ while ( have_posts() ): the_post();
     <?php 
 
 	
-$cat_field = get_field('category_test');
-if (is_array($cat_field)) {
-	$cat_field = $cat_field[0];
-}
-$catinfo = get_category($cat_field);
-
-echo $catinfo->slug; echo 'test';
-
+if (GET('cat') == 'merch') {
+	echo 'test';
+} 
+echo GET('cat');
 	if (false) {
 	}
 	else { // start of not merch
