@@ -20,7 +20,7 @@ while ( have_posts() ): the_post();
 		echo '</div></div><div class="main"><h1>';
 		the_title();
 		echo '</h1>';
-		the_post_thumbnail( 'shop_single' );
+		the_post_thumbnail( 'large' );
 		echo '</div>'; 
 		
 	}
