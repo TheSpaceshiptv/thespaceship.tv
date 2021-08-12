@@ -9,10 +9,14 @@ while ( have_posts() ): the_post();
 ?>
 
 <article class="site-card"> 
-    <?php 
-
-	echo implode(",",get_post_meta( get_the_ID(), 'product_category' ));
-
+<?php
+		    $terms = get_the_terms($product->ID, 'product_cat');
+		    foreach ($terms as $term) {
+			$product_cat = $term->name;
+			echo $product_cat;
+		    }
+			echo $product_cat;
+			
 	if (false) {
 	}
 	else { // start of not merch
