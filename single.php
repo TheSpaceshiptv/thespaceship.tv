@@ -12,8 +12,9 @@ while ( have_posts() ): the_post();
 <?php
 	$terms = get_the_terms($product->ID, 'product_cat');
 	foreach ($terms as $term) {$product_cat = $term->name;}
+	echo $product_cat;
 			
-	if ($product_cat == 'merch') {
+	if ($product_cat == 'Merch') {
 		echo 'hello world!';
 	}
 	else { // start of not merch
