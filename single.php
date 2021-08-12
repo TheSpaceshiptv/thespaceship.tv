@@ -11,7 +11,7 @@ while ( have_posts() ): the_post();
 <article class="site-card"> 
     <?php 
 
-	if (is_product_category('merch')) {
+	if (get_the_terms($product->ID, 'product_cat') == 'merch') {
 		the_content();
 	}
 	else { // start of not merch
