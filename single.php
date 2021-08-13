@@ -16,6 +16,7 @@ while ( have_posts() ): the_post();
 	if ($product_cat == 'Merch') {
 		
 		echo '<div class="aside"><div class="sticky-container">';
+		
 		the_content();
 		echo '</div></div><div class="main"><h1>';
 		the_title();
@@ -26,7 +27,6 @@ while ( have_posts() ): the_post();
 				echo wc_get_gallery_image_html( $attachment_id );
 			}
 		}
-		
 
 		echo '</div>'; 
 		

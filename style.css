@@ -439,6 +439,11 @@ b, strong {
 .donate.button:hover {
     transform: scale(1.1);
 }
+
+.single-product #tab-description p{
+    display: inline-block;
+}
+
 @media only screen and (max-width: 600px) {
     .single-product .site-card, .page .site-card {
         display:flex!important;
