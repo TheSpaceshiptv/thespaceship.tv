@@ -15,20 +15,11 @@ while ( have_posts() ): the_post();
 			
 	if ($product_cat == 'Merch') {
 		
-		echo '<div class="aside"><div class="sticky-container">';
 		
-		the_content();
-		echo '</div></div><div class="main"><h1>';
+		echo '<h1>';
 		the_title();
 		echo '</h1>';
-		
-		if ( $attachment_ids = $product->get_gallery_image_ids() ) {
-			foreach ( $attachment_ids as $attachment_id ) {
-				echo wc_get_gallery_image_html( $attachment_id );
-			}
-		}
-
-		echo '</div>'; 
+		the_content(); 
 		
 	}
 	else { // start of not merch
