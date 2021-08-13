@@ -440,8 +440,8 @@ b, strong {
     transform: scale(1.1);
 }
 
-.single-product #tab-description p{
-    display: inline-block;
+.woocommerce-breadcrumb, .woocommerce-product-gallery, .wc-tabs-wrapper, .related.products, .product_meta{
+    display: inherit!important;
 }
 
 @media only screen and (max-width: 600px) {
