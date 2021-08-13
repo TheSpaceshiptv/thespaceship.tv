@@ -6,23 +6,21 @@ WC()->cart->empty_cart();
 
 while ( have_posts() ): the_post();
 
-?>
-
-<article class="site-card"> 
-<?php
 	$terms = get_the_terms($product->ID, 'product_cat');
 	foreach ($terms as $term) {$product_cat = $term->name;}
 			
 	if ($product_cat == 'Merch') {
-		
-		
-		echo '<h1>';
+	
+		echo '<article class="site-card merch"><h1>';
 		the_title();
 		echo '</h1>';
 		the_content(); 
 		
 	}
+	
 	else { // start of not merch
+
+	echo '<article class="site-card">';
 
 	$free       = $product->get_price() == 0;
 	$bought     = wc_customer_bought_product(get_userdata(get_current_user_id())->user_email, get_current_user_id(), get_the_ID());

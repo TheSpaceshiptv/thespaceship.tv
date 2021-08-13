@@ -435,15 +435,16 @@ b, strong {
     background: rgba(0, 0, 0, 0.75);
     color: white!important;
 }
-
 .donate.button:hover {
     transform: scale(1.1);
 }
-
+/*subcat: merch*/
 .woocommerce-breadcrumb, .woocommerce-product-gallery, .wc-tabs-wrapper, .related.products, .product_meta{
     display: inherit!important;
 }
-
+.single-product .site-card.merch {
+    display: block;
+}
 @media only screen and (max-width: 600px) {
     .single-product .site-card, .page .site-card {
         display:flex!important;
