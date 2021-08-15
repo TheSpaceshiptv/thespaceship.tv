@@ -717,7 +717,7 @@ button.pswp__button
     }
     .single-product .merch .summary .price
     {
-        top:-80px;
+        position:static;
     }
     .single-product .merch .summary select
     {
