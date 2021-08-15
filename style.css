@@ -574,6 +574,10 @@ b, strong {
     color: white;
     font-size:30px;
 }
+.single-product .merch .summary select {
+    margin-bottom:10px;
+    filter: invert(1);
+}
 .single-product .merch .summary .label 
 {
     display:none;
