@@ -568,10 +568,6 @@ b, strong {
     bottom:40px;
     right:0;
 }
-.single-product .merch .summary > p.price
-{
-    display:none;
-}
 .single-product .merch .summary .price
 {
     text-align:right;
