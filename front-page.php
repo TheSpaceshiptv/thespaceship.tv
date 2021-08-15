@@ -151,11 +151,13 @@ while ( $loop->have_posts() ) : $loop->the_post();
 		
 
         <a href="<?php echo GET('permalink')?>" class="card-button">
-            <?php if ( $times->is_showtime ): echo 'LIVE NOW';
+            <?php
+            if ($my_cat=='merch'): echo '$' . $product->get_price();
+            elseif ( $times->is_showtime ): echo 'LIVE NOW';
             elseif ( GET('bought') && $times->is_early ): echo 'WATCH SOON';
             elseif ( GET('bought') ): echo 'WATCH NOW';
             elseif ( $product->get_price() == 0): echo 'WATCH FREE';
-            elseif ( $times->is_late ): echo 'WATCH FOR $' . $product->get_price();
+            elseif ( $times->is_late): echo 'WATCH FOR $' . $product->get_price();
             else: echo '$' . $product->get_price() . ' TICKETS';
             endif; ?> 
             ⇨
