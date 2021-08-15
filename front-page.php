@@ -144,10 +144,9 @@ while ( $loop->have_posts() ) : $loop->the_post();
  ?>
         
         
-    <?php    
-    if: echo $notes;
-    endif;
-    ?>
+        
+        
+		<?php echo $notes; ?>
         
 		
 
