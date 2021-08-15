@@ -466,12 +466,12 @@ b, strong {
 }
 
 @media only screen and (max-width: 600px) {
-    .single-product .site-card, .page .site-card {
+    .single-product .site-card, .page .site-card:not(.merch) {
         display:flex!important;
         flex-direction: column-reverse;
         margin-top:40px;
     }
-    .page .site-card h1, .single-product .site-card h1 {
+    .page .site-card h1, .single-product .site-card:not(.merch) h1 {
         margin-top:50px;
     }
 }
@@ -832,7 +832,7 @@ form.woocommerce-checkout  {
 }
 #order_review img,.about_paypal,form.woocommerce-checkout #order_review_heading, form.woocommerce-checkout .col-2,
 .payment_method_paypal img,.woocommerce-form-coupon-toggle,#customer_details .woocommerce-additional-fields{
-    display:none
+    display:none;
 }
 .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
     width: 100%;
