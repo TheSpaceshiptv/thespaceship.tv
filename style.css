@@ -570,12 +570,9 @@ b, strong {
 }
 .single-product .merch .summary .price
 {
-    text-align:right;
+    text-align:left;
     color: white;
     font-size:30px;
-    position:absolute;
-    right:0;
-    top:-35px;
 }
 .single-product .merch .summary .label 
 {
