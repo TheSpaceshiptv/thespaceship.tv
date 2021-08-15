@@ -144,9 +144,10 @@ while ( $loop->have_posts() ) : $loop->the_post();
  ?>
         
         
-        
-        
-		<?php echo $notes; ?>
+    <?php    
+    if($my_cat == 'merch'): 
+    else: echo $notes;
+    ?>
         
 		
 
