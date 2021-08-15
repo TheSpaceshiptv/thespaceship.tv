@@ -17,7 +17,30 @@ endif;
 $per_page = '14';
 $is_cat = ( strpos($after_bang, '/') !== false ) ? true : false;
 
-if($is_cat):
+if(explode('/', $after_bang, 2)[0] == 'merch'):
+
+	$my_cat 	= explode('/', $after_bang, 2)[0];
+    $after_cat 	= end(explode($my_cat, $after_bang));
+    $my_page 	= end(explode('/', $after_cat));
+    $my_offset = $per_page * ($my_page - 1);
+    $total_shows = (new WP_Query( array( 'post_type' => 'product', 'product_cat' => $my_cat, 'post_status' => 'publish', 'posts_per_page' => -1 ) ))->found_posts;
+    $total_pages = ceil($total_shows / $per_page);
+    $first_page = ($my_page == 1) ;
+    $last_page = ($my_page == $total_pages) ;
+    $next_page = GET('siteurl') . $bang . $my_cat . '/' . ($my_page + 1);
+    $prev_page = GET('siteurl') . $bang . $my_cat . '/' . ($my_page - 1);
+
+    wp_reset_query(); 
+    $args = array( 
+      'post_type' => 'product', 
+      'posts_per_page' => $per_page, 
+      'product_cat' => $my_cat,  
+      'orderby' => 'meta_value', 
+      'order' => 'DESC', 
+      'offset' => $my_offset
+    );
+
+elseif($is_cat):
 
 	$my_cat 	= explode('/', $after_bang, 2)[0];
     $after_cat 	= end(explode($my_cat, $after_bang));
