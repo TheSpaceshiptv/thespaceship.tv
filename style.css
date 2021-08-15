@@ -648,7 +648,8 @@ b, strong {
 .single-product .merch .product_meta,
 .single-product .merch .reset_variations,
 .single-product .merch .related .product_type_variable,
-.single-product .merch .tabs
+.single-product .merch .tabs,
+.single-product .merch .summary p
 {
     display:none!important;
 }
