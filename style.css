@@ -270,6 +270,12 @@ b, strong {
 .home .site-card .category a:hover {
     color: #2ACEBB;
 }
+.home .merch .show-info div,
+.home .merch .main > a + p
+{
+    display:none!important;
+}
+
 @media only screen and (max-width: 480px) {
     .home .site-nav {
     	margin-bottom:20px;
