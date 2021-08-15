@@ -117,7 +117,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
 
 
-<article class="site-card"> 
+<article class="site-card <?php echo $my_cat?>"> 
     <?php $notes = GET('notes'); ?>
 
     <a href="<?php echo GET('permalink')?>" class="aside show-info">
