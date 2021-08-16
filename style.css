@@ -836,14 +836,14 @@ button.pswp__button
     }
     .single-product .merch .related .woocommerce-loop-product__title
     {
-        height:55px;
+        height:30px;
         font-size:12px;
-        line-height:24px;
+        line-height:6px;
         width:100%;
         overflow:hidden;
         padding:0;
         word-break: break-all!important;
-        top:-55px!important;
+        top:-30px!important;
     }
     .single-product .merch .related img
     {
