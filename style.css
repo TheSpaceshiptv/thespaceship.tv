@@ -583,6 +583,11 @@ b, strong
 
 /* MERCH *\
 \* ----- */
+.page-id-675 .site-nav a[href*="contact"],
+.body-merch .site-nav a[href*="merch"]
+{
+    color:#E966C2;
+}
 .woocommerce-breadcrumb, .woocommerce-product-gallery, .wc-tabs-wrapper, .related.products, .product_meta
 {
     display: inherit!important;
@@ -590,7 +595,7 @@ b, strong
 .single-product .merch 
 {
     display: block;
-    margin-bottom:400px;
+    margin-bottom:400px; 
 }
 .single-product .merch li
 {
