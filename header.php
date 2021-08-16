@@ -26,6 +26,8 @@
         <a href="<?php echo site_url(); ?>" class="site-logo">
             <img src="<?php bloginfo('template_url') ?>/assets/logo-long.png" alt="TheSpaceShip.tv">
         </a>
+        <a href="<?php echo site_url();?>/?/merch/1">Merch</a>
+        <a href="<?php echo site_url();?>/contact">Contact</a>
         <?php echo do_shortcode( '[xoo_el_action type="login" display="button" text="Login" change_to="myaccount" redirect_to="same"]' ); ?>
     </nav>
     
