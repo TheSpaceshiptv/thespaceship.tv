@@ -635,11 +635,13 @@ b, strong
     transform: scale(1.2);
 }
 .single-product .merch .flex-control-nav 
+
 {    
     display:flex;   
     overflow-x:scroll;
 }
 .single-product .merch .flex-control-nav img
+
 {
     opacity:0.5;
     transition:transform .3s;
@@ -647,6 +649,7 @@ b, strong
     border-radius:10px;
 }
 .single-product .merch .flex-control-nav .flex-active
+
 {
     opacity:1;
     transform:scale(1);
@@ -702,7 +705,7 @@ b, strong
     position:relative;
     overflow:hidden;
     margin:20px;
-    text-align:cented;
+    text-align:right;
     transition: transform .3s;
     box-shadow: 0 0 20px black;
 }
@@ -841,6 +844,7 @@ button.pswp__button
     }
     .single-product .merch .related 
     {
+        overflow-x:auto;
         overflow-y:hidden;
         white-space: nowrap;
         height:320px;
