@@ -113,8 +113,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
 <?php if($my_cat=='merch'):?>
 <script>
-      var body = document.body;
-      body.classList.add("body-merch");
+      document.body.classList.add("body-merch");
 </script>
 <?php endif; ?>
 
@@ -194,8 +193,10 @@ endwhile;
 <?php
 echo '<nav class="filter_shows">';
 
-if ($my_cat=='merch') {
-  echo '<a href="' . GET('siteurl') . '>⇦ Go Home</a>';
+if ($my_cat=='merch') { 
+  ?>
+  <a href="<?php echo GET('siteurl')?>">⇦ Go Home</a> 
+  <?php 
 }
 
 else {
