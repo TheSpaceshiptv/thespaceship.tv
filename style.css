@@ -705,7 +705,7 @@ b, strong
     position:relative;
     overflow:hidden;
     margin:20px;
-    text-align:right;
+    text-align:center;
     transition: transform .3s;
     box-shadow: 0 0 20px black;
 }
@@ -844,7 +844,6 @@ button.pswp__button
     }
     .single-product .merch .related 
     {
-        overflow-x:auto;
         overflow-y:hidden;
         white-space: nowrap;
         height:320px;
