@@ -930,6 +930,10 @@ button.pswp__button
         position:absolute;
         left:0px;
     }
+    .single-product .merch .woocommerce-product-gallery .woocommerce-product-gallery__trigger:hover
+    {
+        transform: none;
+    }
     .single-product .merch .related ul
     {
         transform: scale(0.7);
