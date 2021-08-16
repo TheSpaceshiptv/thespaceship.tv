@@ -111,12 +111,6 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
 
 
-<?php if($my_cat=='merch'):?>
-<script>
-      document.body.classList.add("body-merch");
-</script>
-<?php endif; ?>
-
 
 
 
