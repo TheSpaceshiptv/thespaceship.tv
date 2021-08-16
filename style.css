@@ -120,16 +120,17 @@ b, strong
 {
     
     .site-nav 
-{ 
+    { 
         display: block;
         text-align: center;
+        margin-bottom:15vh;
     }
     .site-nav a 
-{
+    {
         display: block;
     }
     .site-nav .site-logo 
-{
+    {
         padding-bottom: 20px;
     }
 }
