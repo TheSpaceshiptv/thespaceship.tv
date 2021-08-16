@@ -590,8 +590,7 @@ b, strong
 {
     display: block;
 }
-.single-product .merch .woocommerce-Tabs-panel,
-.single-product .merch .woocommerce-product-gallery
+.single-product .merch
 {
     padding-bottom:400px;
 }
