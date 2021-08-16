@@ -705,7 +705,7 @@ b, strong
     position:relative;
     overflow:hidden;
     margin:20px;
-    text-align:right;
+    text-align:center;
     transition: transform .3s;
     box-shadow: 0 0 20px black;
 }
@@ -858,17 +858,18 @@ button.pswp__button
     {
         overflow:visible;
         margin-top:100px;
+        margin-left:0;
+        height:30px;
+        font-size:12px;
+        line-height:6px;
     }
     .single-product .merch .related .woocommerce-loop-product__title
     {
-        height:55px;
-        font-size:12px;
-        line-height:24px;
         width:100%;
         overflow:hidden;
         padding:0;
         word-break: break-all!important;
-        top:-55px!important;
+        top:-30px!important;
     }
     .single-product .merch .related img
     {
@@ -877,8 +878,8 @@ button.pswp__button
     }
     .single-product .merch .related .price
     {
-        height:55px;
-        bottom:-55px!important;
+        height:30px;
+        bottom:-30px!important;
         color:#E966C2;
     }
     .single-product .merch h1
