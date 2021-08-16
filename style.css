@@ -320,7 +320,6 @@ b, strong
 }
 .home .merch .show-info div,
 .home .merch .main > a + p
-
 {
     display:none!important;
 }
@@ -539,7 +538,6 @@ b, strong
     color: #2ACEBB;
 }
 .donate.button 
-
 {
     float:right;
     padding: 10px;
@@ -595,19 +593,16 @@ b, strong
     list-style:none;
 }
 .single-product .merch .product 
-
 {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .single-product .merch .product > * 
-
 {
     width:27%;
 }
 .single-product .merch .woocommerce-product-gallery 
-
 {
     order: -5;
     width:70%;
@@ -616,7 +611,6 @@ b, strong
     align-content:flex-start;
 }
 .woocommerce-product-gallery__trigger
-
 {
     position:absolute;
     transition: border .3s, transform .3s;
@@ -629,19 +623,16 @@ b, strong
     left:60px;
 }
 .single-product .merch .woocommerce-product-gallery__trigger:hover
-
 {
     border-color:white;
     transform: scale(1.2);
 }
 .single-product .merch .flex-control-nav 
-
 {    
     display:flex;   
     overflow-x:scroll;
 }
 .single-product .merch .flex-control-nav img
-
 {
     opacity:0.5;
     transition:transform .3s;
@@ -649,27 +640,23 @@ b, strong
     border-radius:10px;
 }
 .single-product .merch .flex-control-nav .flex-active
-
 {
     opacity:1;
     transform:scale(1);
     border:double #E966C2;
 }
 .single-product .merch .wc-tabs-wrapper
-
 {
     order:-3;
     padding-bottom:250px;
 }
 .single-product .merch .summary 
-
 {
     position:absolute;
     bottom:40px;
     right:0;
 }
 .single-product .merch .summary .price
-
 {
     text-align:left;
     color: white;
@@ -681,46 +668,43 @@ b, strong
     filter: invert(1);
 }
 .single-product .merch .summary .label 
-
 {
     display:none;
 }
 .single-product .merch .related 
-
 {
     width: 100%;
     position:absolute!important;
     bottom:-400px;
 }
 .single-product .merch .related > h2 
-
 {
     color:white;
     text-shadow: 0 0 10px black;
 }
 .single-product .merch .related li 
-
 {
     display:inline-block;
     position:relative;
     overflow:hidden;
     margin:20px;
-    text-align:center;
+    text-align:cented;
     transition: transform .3s;
     box-shadow: 0 0 20px black;
 }
 .single-product .merch .related li:hover 
-
 {
     transform: scale(1.1);
 }
 .single-product .merch .related li .price
-
 {
     display:block;
     color: white;
     position:absolute;
-    bottom:0;
+    bottom:-30px;
+    height:30px;
+    line-height:6px;
+    font-size: 12px;
     width:100%;
     background: rgba(0,0,0,.8);
     padding:10px;
@@ -728,12 +712,10 @@ b, strong
     transition:color .3s;
 }
 .single-product .merch .related li:hover .price
-
 {
     color: #2ACEBB;
 }
 .single-product .merch .related li h2 
-
 {
     position:absolute;
     top:-60px;
@@ -747,12 +729,10 @@ b, strong
     transition:top .3s;
 }
 .single-product .merch .related li:hover h2 
-
 {
     top:0;
 }
 .single-product .merch .related img
-
 {
     width:160px;
     height:160px;
@@ -762,26 +742,22 @@ b, strong
 .single-product .merch .reset_variations,
 .single-product .merch .related .product_type_variable,
 .single-product .merch .tabs
-
 {
     display:none!important;
 }
 .single-product .merch .related,
 .single-product .merch .wc-tabs-wrapper,
 .single-product .merch .tabs ~ div 
-
 {
     display:block!important;
     position:static;
     
 }
 button.pswp__button
-
 {
     background-color:rgba(0,0,0,.8)!important;
 }
 @media only screen and (max-width:1050px)
-
 {
     .single-product .merch
     {
@@ -1121,7 +1097,6 @@ form.checkout.woocommerce-checkout
 .woocommerce-checkout-review-order-table thead,
 .woocommerce-checkout-review-order-table tbody *,
 .woocommerce-checkout-review-order-table .cart-subtotal
-
 {
     display:none!important;
 }
@@ -1353,7 +1328,6 @@ body.woocommerce-account p button:hover
 }
 .filter_shows a[href*="hidden"],
 .filter_shows a[href*="merch"]
-
 {
     display:none;
 }
