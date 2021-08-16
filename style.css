@@ -79,6 +79,11 @@ b, strong
     display: flex; 
     margin-bottom: 40px; 
 }
+.page-id-675 .site-nav a[href*="contact"],
+.body-merch .site-nav a[href*="merch"]
+{
+    color:#E966C2;
+}
 .home .site-nav 
 {
     margin-bottom: 25vh;
@@ -583,11 +588,6 @@ b, strong
 
 /* MERCH *\
 \* ----- */
-.page-id-675 .site-nav a[href*="contact"],
-.body-merch .site-nav a[href*="merch"]
-{
-    color:#E966C2;
-}
 .woocommerce-breadcrumb, .woocommerce-product-gallery, .wc-tabs-wrapper, .related.products, .product_meta
 {
     display: inherit!important;
@@ -828,7 +828,7 @@ button.pswp__button
         position:absolute!important;
         right:0;
         text-align:right;
-        margin:0 20px 0;
+        margin:20px 20px 0;
         padding:0;
         overflow-x:hidden;
     }
