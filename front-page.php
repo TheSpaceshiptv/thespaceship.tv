@@ -40,11 +40,6 @@ if(explode('/', $after_bang, 2)[0] == 'merch'):
       'offset' => $my_offset
     );
 
-    ?> <script>
-      var body = document.body;
-      body.classList.add("merch");
-    </script> <?php
-
 elseif($is_cat):
 
 	$my_cat 	= explode('/', $after_bang, 2)[0];
@@ -116,8 +111,12 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
 
 
-
-
+<?php if($my_cat=='merch'):?>
+<script>
+      var body = document.body;
+      body.classList.add("body-merch");
+</script>
+<?php endif; ?>
 
 
 
