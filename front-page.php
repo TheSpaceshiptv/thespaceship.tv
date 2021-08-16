@@ -1,6 +1,7 @@
 <?php 
 
 
+get_header(); 
 
 $actual_link = "https://$_SERVER[HTTPS_HOST]$_SERVER[REQUEST_URI]";
 $bang = '/?/';
@@ -92,7 +93,6 @@ else:
 
 endif;
 
-get_header(); 
 
 $loop = new WP_Query( $args );
 $featured_active = false;
