@@ -786,6 +786,11 @@ button.pswp__button
     .single-product .merch
     {
         min-height:800px;
+        padding-bottom: 250px;
+    }
+    .single-product .merch .wc-tabs-wrapper
+    {
+        padding-bottom: 0;
     }
     .single-product .merch .woocommerce-tabs
     {
