@@ -1,6 +1,5 @@
 <?php 
 
-get_header(); 
 
 
 $actual_link = "https://$_SERVER[HTTPS_HOST]$_SERVER[REQUEST_URI]";
@@ -39,6 +38,11 @@ if(explode('/', $after_bang, 2)[0] == 'merch'):
       'order' => 'DESC', 
       'offset' => $my_offset
     );
+
+    ?> <script>
+      var body = document.body;
+      body.classList.add("merch");
+    </script> <?php
 
 elseif($is_cat):
 
@@ -87,6 +91,8 @@ else:
     );
 
 endif;
+
+get_header(); 
 
 $loop = new WP_Query( $args );
 $featured_active = false;
