@@ -897,7 +897,7 @@ button.pswp__button
         transform-origin:0 0;
     }
 }
-@media only screen and (max-width:500px)
+@media only screen and (max-width:520px)
 {
     .single-product .merch .related ul
     {
