@@ -111,6 +111,12 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
 
 
+<?php if($my_cat=='merch'):?>
+<script>
+      document.body.classList.add("body-merch");
+</script>
+<?php endif; ?>
+
 
 
 
@@ -150,7 +156,9 @@ while ( $loop->have_posts() ) : $loop->the_post();
 
         <a href="<?php echo GET('permalink')?>" class="card-button">
             <?php
-            if ($my_cat=='merch'): echo '$' . number_format((float)($product->get_price())), 2, '.', '');
+            if ($my_cat=='merch'): echo '$' . number_format((float)(
+              $product->get_price()
+            ), 2, '.', '');
             elseif ( $times->is_showtime ): echo 'LIVE NOW';
             elseif ( GET('bought') && $times->is_early ): echo 'WATCH SOON';
             elseif ( GET('bought') ): echo 'WATCH NOW';
