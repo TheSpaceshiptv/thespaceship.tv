@@ -862,14 +862,14 @@ button.pswp__button
     }
     .single-product .merch .related .woocommerce-loop-product__title
     {
-        height:30px;
+        height:20px;
         font-size:12px;
-        line-height:6px;
+        line-height:12px;
         width:100%;
         overflow:hidden;
         padding:0;
         word-break: break-all!important;
-        top:-30px!important;
+        top:-20px!important;
     }
     .single-product .merch .related img
     {
@@ -879,9 +879,9 @@ button.pswp__button
     .single-product .merch .related .price
     {
         font-size:12px;
-        line-height:6px;
-        height:30px;
-        bottom:30px!important;
+        line-height:0;
+        top:120px!important;
+        height:20px;
         color:#E966C2;
     }
     .single-product .merch h1
