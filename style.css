@@ -140,7 +140,6 @@ b, strong
 }
 @media only screen and (max-width: 800px) 
 {
-    
     .site-nav 
     { 
         display: block;
@@ -155,9 +154,10 @@ b, strong
     {
         padding-bottom: 20px;
     }
-    .site-nav a[href*="merch"]:hover
+    .site-nav a~a
     {
-        transform: none;
+        display:inline-block;
+        margin:0;
     }
 }
 
