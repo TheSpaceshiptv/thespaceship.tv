@@ -95,7 +95,18 @@ b, strong
 .site-nav a~a 
 { 
     text-transform: uppercase;
-    padding:15px 0 0 40px;
+    padding: 10px 20px;
+}
+.site-nav a[href*="merch"]
+{
+    border: double #B1C8C8;
+    border-radius: 10px;
+}
+.site-nav a[href*="merch"]:hover
+{
+    transform: scale(1.1);
+    color:white;
+    border-color: white;
 }
 .site-logo 
 {
