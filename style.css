@@ -155,6 +155,10 @@ b, strong
     {
         padding-bottom: 20px;
     }
+    .site-nav a[href*="merch"]:hover
+    {
+        transform: none;
+    }
 }
 
 
