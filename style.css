@@ -83,6 +83,12 @@ b, strong
 .body-merch .site-nav a[href*="merch"]
 {
     color:#E966C2;
+    border-color:#E966C2:
+}
+.body-merch .site-nav a[href*="merch"]:hover
+{
+    color:#E966C2;
+    transform: none;
 }
 .home .site-nav 
 {
@@ -99,14 +105,13 @@ b, strong
 }
 .site-nav a[href*="merch"]
 {
-    border: double #B1C8C8;
+    border: double #E966C2;
     border-radius: 10px;
 }
 .site-nav a[href*="merch"]:hover
 {
     transform: scale(1.1);
     color:white;
-    border-color: white;
 }
 .site-logo 
 {
