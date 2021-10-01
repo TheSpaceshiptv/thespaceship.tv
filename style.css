@@ -609,7 +609,7 @@ b, strong
 
 /* MERCH *\
 \* ----- */
-.woocommerce-breadcrumb, .woocommerce-product-gallery, .wc-tabs-wrapper, .related.products, .product_meta
+.merch :is(.woocommerce-breadcrumb, .woocommerce-product-gallery, .wc-tabs-wrapper, .related.products, .product_meta)
 {
     display: inherit!important;
 }
