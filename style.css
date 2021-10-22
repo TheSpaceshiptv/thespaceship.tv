@@ -1377,6 +1377,11 @@ body.woocommerce-account p button
     cursor: pointer;
     border-radius: 10px;
 }
+body.woocommerce-account .woocommerce-MyAccount-orders .woocommerce-orders-table__cell-order-actions {
+    border: double  #E966C2;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
 body.woocommerce-account p button:hover 
 {
     transform: scale(1.1);
