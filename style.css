@@ -1380,7 +1380,7 @@ body.woocommerce-account p button
 body.woocommerce-account .woocommerce-MyAccount-orders .woocommerce-orders-table__cell-order-actions {
     border: double  #E966C2;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 4px 8px;
 }
 body.woocommerce-account p button:hover 
 {
