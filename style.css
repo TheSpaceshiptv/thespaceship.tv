@@ -1383,6 +1383,12 @@ body.woocommerce-account .woocommerce-MyAccount-orders .woocommerce-orders-table
     border-radius: 10px;
     padding: 4px;
 }
+
+body.woocommerce-account section.woocommerce-order-details .woocommerce-table--order-details .woocommerce-table__line-item .woocommerce-table__product-name a {
+    color: #E966C2;
+    text-decoration:underline;
+}
+
 body.woocommerce-account p button:hover 
 {
     transform: scale(1.1);
