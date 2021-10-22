@@ -3,6 +3,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 
 ## TODO
 
+- purchase not working for out of state
 - some purchases not showing up from paypal
 - tax not applying (?)
 - gift purchases
@@ -11,7 +12,6 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 - 18+ checkbox
 - create landing page for login / signup
 - create about page
-- move contact us to top nav
 - user role signup (password?)
 - add a pagination indicator
 - fix layout breaking when show ends before start (?)
@@ -22,6 +22,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 
 new
 - create landing page for purchase
+- move contact us to top nav
 
 old
 - descriptions missing
