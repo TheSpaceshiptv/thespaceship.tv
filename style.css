@@ -1070,6 +1070,11 @@ button.pswp__button
 {
     content:" ⇨";
 }
+.woocommerce-cart .wc-proceed-to-checkout:hover
+{
+    transform:scale(1.1);
+    color:white;
+}
 
 
 
