@@ -2,7 +2,6 @@
 
 get_header(); 
 
-WC()->cart->empty_cart(); 
 
 while ( have_posts() ): the_post();
 
