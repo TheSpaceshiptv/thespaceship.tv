@@ -4,12 +4,4 @@
     <p><a href="<?php echo site_url(); ?>" >Sorry, this page doesn't seem to exist. Click here to go home.</a></p>
 </div>
 
-<?php if ( WC()->cart->get_cart_contents_count() == 0 ) {
-    echo "test";
-}
-else {
-    echo "not test";
-}
-?>
-
 <?php get_footer(); ?>
