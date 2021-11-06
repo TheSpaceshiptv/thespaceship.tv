@@ -3,6 +3,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 
 ## TODO
 
+- login from homepage, doesn't update logged in header
 - purchase not working for out of state
 - some purchases not showing up from paypal
 - tax not applying (?)
