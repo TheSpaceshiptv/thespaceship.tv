@@ -1045,6 +1045,7 @@ button.pswp__button
     width:30px;
     height:30px;
     border: solid 2px #B1C8C8;
+    color: #B1C8C8;
     background:rgba(0, 0, 0, 0.75);
     z-index:10;
 }
