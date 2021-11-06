@@ -80,7 +80,8 @@ b, strong
     margin-bottom: 40px; 
 }
 .page-id-675 .site-nav a[href*="contact"],
-.body-merch .site-nav a[href*="merch"]
+.body-merch .site-nav a[href*="merch"],
+.woocommerce-cart a[href*="cart"]
 {
     color:#E966C2;
     border-color:#E966C2;
@@ -245,6 +246,15 @@ b, strong
     font-size: 16px;
     letter-spacing: 4px;
 }
+
+
+
+
+
+
+
+
+
 
 
 
