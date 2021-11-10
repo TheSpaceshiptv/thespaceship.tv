@@ -1022,13 +1022,17 @@ button.pswp__button
 {
     display:block;
 }
-.woocommerce-cart .woocommerce-message a 
+.woocommerce-cart .woocommerce-message a
 {
     display:block;
     margin-bottom:20px;
     color:white;
+    
+    text-align:center;
+    padding: 20px;
+    font-size:20px;
 }
-.woocommerce-cart .woocommerce-message a:before
+.woocommerce-cart .woocommerce-message a:not(.restore-item):before
 {
     content:"⇦ ";
 }
