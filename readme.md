@@ -1,15 +1,13 @@
 ## thespaceship.tv
 This repository contains the files for a custom WordPress theme for [thespaceship.tv](https://thespaceship.tv).
 
-## TODO
+## TO DO
 
-- purchase not working for out of state
 - some purchases not showing up from paypal
 - tax not applying (?)
 - gift purchases
 - discount codes
 - season pass
-- 18+ checkbox
 - create landing page for login / signup
 - create about page
 - user role signup (password?)
@@ -18,9 +16,16 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 - add error icon if show ends before start (?)
 - discount scheduling calendar no display
 
+## IN PROGRESS
+
+- purchase not working for out of state
+- 18+ checkbox
+
 ## COMPLETED
 
 new
+- move donate button on unpurchased items
+- improve cart readability
 - add quantity indicator to cart link
 - implement FAQ page
 - login redirect to orders

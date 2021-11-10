@@ -576,7 +576,6 @@ b, strong
     color: #2ACEBB;
 }
 .donate.button 
-
 {
     float:right;
     padding: 10px;
@@ -590,7 +589,10 @@ b, strong
 {
     transform: scale(1.1);
 }
-
+.main .donate.button 
+{
+    margin:0 0 30px 30px;
+}
 @media only screen and (max-width: 600px) 
 {
     .single-product .site-card:not(.merch), .page .site-card 
