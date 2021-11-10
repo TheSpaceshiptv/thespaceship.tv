@@ -24,7 +24,6 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 ## COMPLETED
 
 new
-- move donate button on unpurchased items
 - improve cart readability
 - add quantity indicator to cart link
 - implement FAQ page
