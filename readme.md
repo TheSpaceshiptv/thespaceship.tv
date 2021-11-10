@@ -3,7 +3,6 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 
 ## TODO
 
-- add quantity indicator to cart link
 - purchase not working for out of state
 - some purchases not showing up from paypal
 - tax not applying (?)
@@ -22,6 +21,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 ## COMPLETED
 
 new
+- add quantity indicator to cart link
 - implement FAQ page
 - login redirect to orders
 - allow merch quantities 

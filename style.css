@@ -1109,7 +1109,7 @@ a[href="https://thespaceship.tv/homepage/"]
 {
     display:none;
 }
-.woocommerce-cart tbody tr 
+.woocommerce-cart .cart tbody tr 
 {
     position:relative;
     vertical-align:top;
