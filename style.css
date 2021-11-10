@@ -1610,7 +1610,9 @@ body.woocommerce-account p button:hover
     color: black;
     border:none;
 }
-
+.sp-easy-accordion {
+    filter: invert(1);
+}
 
 
 
