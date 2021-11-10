@@ -813,7 +813,7 @@ b, strong
     position:static;
     
 }
-.single-product :not(.merch) .quantity 
+.single-product .site-card:not(.merch) .quantity 
 {
     display:none;
 }
@@ -825,6 +825,7 @@ b, strong
 .single-product .merch .quantity:before
 {
     content: "Quantity: ";
+    filter:invert(1);
 }
 
 button.pswp__button
