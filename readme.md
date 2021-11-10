@@ -3,7 +3,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 
 ## TODO
 
-- login from homepage, doesn't update logged in header
+- add quantity indicator to cart link
 - purchase not working for out of state
 - some purchases not showing up from paypal
 - tax not applying (?)
@@ -22,6 +22,10 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 ## COMPLETED
 
 new
+- implement FAQ page
+- login redirect to orders
+- merch quantities
+- built cart page
 - create landing page for purchase
 - move contact us to top nav
 
