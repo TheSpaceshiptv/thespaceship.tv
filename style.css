@@ -813,6 +813,20 @@ b, strong
     position:static;
     
 }
+.single-product :not(.merch) .quantity 
+{
+    display:none;
+}
+.single-product .merch .quantity 
+{
+    filter:invert(1);
+    margin-top:20px;
+}
+.single-product .merch .quantity:before
+{
+    content: "Quantity: ";
+}
+
 button.pswp__button
 
 {
