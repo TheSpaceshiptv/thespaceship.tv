@@ -1027,7 +1027,7 @@ button.pswp__button
     display:block;
     margin-bottom:20px;
     color:white;
-    
+    text-decoration: underline;
     text-align:center;
     padding: 20px;
     font-size:20px;
