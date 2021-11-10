@@ -16,10 +16,8 @@
 // ⠀⠀⡨⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢷⣤⠉⢹⣯⣿⣜⣟⠊⠁⠀⣰⢶⣿⣿⣿⣿
 // ⠀⢼⢻⣿⣿⣿⣿⣿⣿⣿⣟⢹⣿⡿⡵⣴⡌⠋⡟⠿⠎⡓⠞⠏⠙⠉⣉⣄⣼⣶
 
-function custom_remove_all_quantity_fields( $return, $product ) {return true;}
-add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_fields', 10, 2 );
-
-// function cw_remove_quantity_fields( $return, $product ) { return true; }
+// function custom_remove_all_quantity_fields( $return, $product ) {return true;}
+// add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_fields', 10, 2 );
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
