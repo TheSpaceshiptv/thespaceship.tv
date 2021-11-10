@@ -1105,7 +1105,10 @@ button.pswp__button
     transform:scale(1.1);
     color:white;
 }
-
+a[href="https://thespaceship.tv/homepage/"]
+{
+    display:none;
+}
 
 
 
