@@ -24,7 +24,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 new
 - implement FAQ page
 - login redirect to orders
-- merch quantities
+- allow merch quantities 
 - built cart page
 - create landing page for purchase
 - move contact us to top nav
