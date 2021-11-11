@@ -80,7 +80,8 @@ b, strong
     margin-bottom: 40px; 
 }
 .page-id-675 .site-nav a[href*="contact"],
-.body-merch .site-nav a[href*="merch"]
+.body-merch .site-nav a[href*="merch"],
+.woocommerce-account .site-nav a[href*="account"]
 {
     color:#E966C2;
     border-color:#E966C2;
@@ -1134,6 +1135,10 @@ a[href="https://thespaceship.tv/homepage/"]
 {
     background:rgba(0, 0, 0, 0.5);
 }
+.woocommerce-cart .product-name
+{
+    padding-right: 10px;
+}
 
 
 
@@ -1656,9 +1661,34 @@ body.woocommerce-account p button:hover
     color: black;
     border:none;
 }
-.sp-easy-accordion {
+.sp-easy-accordion 
+{
     filter: invert(1);
 } 
+.page-id-675 .site-card,
+.page-id-70 .site-card
+{
+    padding-top:40px;
+}
+.page-id-675 .site-card:before,
+.page-id-70 .site-card:before
+{
+    text-transform: uppercase;
+    font-size:20px;
+    position:absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.page-id-70 .site-card:before
+{
+    content: "Cart";
+}
+.page-id-675 .site-card:before
+{
+    content: "Contact";
+}
+
 
 
 
