@@ -200,3 +200,48 @@ function get_times() {
     // send the times back to the single template
     return $times;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Add Checkbox
+add_action('woocommerce_after_checkout_billing_form', 'my_required_checkout_field');
+function my_required_checkout_field()
+{
+    woocommerce_form_field('age_confirm', array(
+        'type' => 'checkbox',
+        'class' => array('input-checkbox'),
+        'label' => __('I confirm that I am 18 years or older.'),
+        'required' => true,
+    ), WC()->checkout->get_value('age_confirm'));
+}
+ 
+ 
+// Process the checkout
+add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
+function my_custom_checkout_field_process()
+{
+    if (!$_POST['age_confirm']) {
+        wc_add_notice(__('Please confirm you are 18 years or older'), 'error');
+    }
+}
+ 
+//Update the order meta with field value
+add_action('woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta');
+function my_custom_checkout_field_update_order_meta($order_id)
+{
+    if ($_POST['age_confirm']) {
+        update_post_meta($order_id, 'Age Confirm', esc_attr($_POST['age_confirm']));
+    }
+}
