@@ -1668,18 +1668,17 @@ body.woocommerce-account p button:hover
 .page-id-675 .site-card,
 .page-id-70 .site-card
 {
-    padding-top:40px;
+    padding-top:46px;
 }
 .page-id-675 .site-card:before,
 .page-id-70 .site-card:before
 {
-    text-transform: uppercase;
-    font-size:20px;
+    font-weight:bold;
+    font-size:26px;
     position:absolute;
     left: 20px;
     top: 20px;
 }
-
 .page-id-70 .site-card:before
 {
     content: "Cart";
