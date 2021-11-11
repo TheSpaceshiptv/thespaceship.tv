@@ -80,8 +80,7 @@ b, strong
     margin-bottom: 40px; 
 }
 .page-id-675 .site-nav a[href*="contact"],
-.body-merch .site-nav a[href*="merch"],
-.woocommerce-cart a[href*="cart"]
+.body-merch .site-nav a[href*="merch"]
 {
     color:#E966C2;
     border-color:#E966C2;
