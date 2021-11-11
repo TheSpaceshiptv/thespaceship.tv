@@ -109,6 +109,7 @@ b, strong
     border: double #E966C2;
     border-radius: 10px;
     margin-bottom: -3px;
+    margin-right: 10px;
 }
 .site-nav a[href*="merch"]:hover
 {

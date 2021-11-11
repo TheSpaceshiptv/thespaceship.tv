@@ -24,6 +24,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 ## COMPLETED
 
 new
+- fix top navigation layout
 - improve cart readability
 - add quantity indicator to cart link
 - implement FAQ page
