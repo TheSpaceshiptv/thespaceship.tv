@@ -1099,9 +1099,16 @@ button.pswp__button
 {
     margin: 20px 0;
     float:right;
+}
+.woocommerce-cart .wc-proceed-to-checkout a
+{
     border: double #E966C2;
     padding: 10px 20px;
     border-radius:10px;
+}
+.woocommerce-cart .wc-proceed-to-checkout a:hover
+{
+    color:white;
 }
 .woocommerce-cart .wc-proceed-to-checkout:after
 {
