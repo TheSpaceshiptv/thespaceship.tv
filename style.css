@@ -68,6 +68,10 @@ b, strong
     max-width: 1140px;
     margin: 0 auto;
 }
+input
+{
+    border-radius:2px;
+}
 
 
 
