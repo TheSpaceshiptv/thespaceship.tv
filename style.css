@@ -1131,7 +1131,7 @@ a[href="https://thespaceship.tv/homepage/"]
     width:150px;
     padding-bottom:20px;
 }
-.woocommerce-cart tbody tr:nth-child(2) 
+.woocommerce-cart .cart_item:nth-child(2) 
 {
     background:rgba(0, 0, 0, 0.5);
 }
