@@ -215,6 +215,15 @@ function get_times() {
 
 
 
+
+
+
+
+
+
+
+/*
+
 // Add Checkbox
 add_action('woocommerce_after_checkout_billing_form', 'my_required_checkout_field');
 function my_required_checkout_field()
@@ -226,7 +235,6 @@ function my_required_checkout_field()
         'required' => true,
     ), WC()->checkout->get_value('age_confirm'));
 }
- 
  
 // Process the checkout
 add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
@@ -245,3 +253,5 @@ function my_custom_checkout_field_update_order_meta($order_id)
         update_post_meta($order_id, 'Age Confirm', esc_attr($_POST['age_confirm']));
     }
 }
+
+*/
