@@ -370,6 +370,13 @@ input
     border-radius: 40px;
     box-shadow: 0 0 10px black;
 }
+.current-page
+{
+    background:rgba(0,0,0,0.4);
+    border-radius:10px;
+    box-shadow:1px 1px 20px black;
+}
+
 .home .site-card .category 
 {
     margin-bottom:10px;
