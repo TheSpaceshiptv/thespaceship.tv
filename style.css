@@ -389,7 +389,6 @@ input
 #page-select .selected
 {
     color:#E966C2;
-    text-decoration: underline;
     cursor:default;
 }
 .page-links .current-page
