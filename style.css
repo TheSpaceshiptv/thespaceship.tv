@@ -358,9 +358,10 @@ input
 .page-links 
 {
     width: 100%;
-    margin: 20px;
+    margin: 20px 0 60px;
     font-size: 20px;
     text-align: center;
+    position:relative;
 }
 .page-links .bubble 
 {
@@ -388,10 +389,6 @@ input
 #page-select:target
 {
     display:block;
-}
-.page-links
-{
-    position:relative;
 }
 .page-links .current-page
 {
