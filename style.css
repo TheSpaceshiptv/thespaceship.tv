@@ -1787,6 +1787,10 @@ body.woocommerce-account p button:hover
     margin: 40px 0 20px;
     font-size:20px;
 }
+.page-id-675 .gform_confirmation_message_1 
+{
+    margin-top:20px;
+}
 @media only screen and (max-width: 641px)
 {
     .page-id-675 .site-card:not(.merch), .page .site-card 
