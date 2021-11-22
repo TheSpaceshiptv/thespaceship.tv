@@ -187,7 +187,14 @@ endwhile;
     else:
 	    echo ($first_page) ? '' : '<a href="' . $prev_page . '">⇦</a>';
     endif;
-    echo ($total_pages > 1) ? '<span class="current-page">Page ' . $my_page . ' of ' . $total_pages . '</span>' : '';
+    echo ($total_pages > 1) ? '<span class="current-page">Page <a href="#page-select">' . $my_page . '</a> of ' . $total_pages . '</span>' : '';
+    if($total_pages > 1) {
+      echo '<div id="page-select"><span class="page-select-label">Select a Page: </span>';
+      for ($x = 0; $x <= $total_pages; $x++) {
+        echo '<a href="' . GET('siteurl') . $bang . $my_cat . '/' . ($x) . '">' . $x . '</a>';
+      }
+      echo '</div>'
+    }
     echo ($last_page) ? '' : '<a href="' . $next_page . '">⇨</a>';
 ?>
 </nav>
