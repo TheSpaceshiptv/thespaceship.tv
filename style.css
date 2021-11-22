@@ -386,6 +386,14 @@ input
 {
     display:block;
 }
+.page-display .cancel, #page-select:target ~ .page-display .current-page:not(.cancel)
+{
+    display: none;
+}
+#page-select:target ~ .page-display .cancel
+{
+    display:inline;
+}
 #page-select .selected
 {
     color:#E966C2;

@@ -182,27 +182,28 @@ endwhile;
 
 <nav id="page-links" class="page-links">
 <?php 
-    if ($my_page == 2 && !$is_cat):
-	    echo '<a class="bubble" href="' . GET('siteurl') . '">⇦</a>';
-    else:
-	    echo ($first_page) ? '' : '<a class="bubble" href="' . $prev_page . '">⇦</a>';
-    endif;
-    echo ($total_pages > 1) ? '<span class="page-display">Page <a class="current-page" href="#page-select">' . $my_page . '</a> of ' . $total_pages . '</span>' : '';
-    if($total_pages > 1) {
-      echo '<div id="page-select"><span class="page-select-label">Select a Page: </span>';
-      for ($x = 1; $x <= $total_pages; $x++) {
-        if ($x == $my_page){
-          echo '<a class="selected">' . $x . '</a>';
-        }
-        else {
-          echo '<a href="' . GET('siteurl') . $bang;
-          echo ($is_cat) ? $my_cat . '/' : ''; 
-          echo ($x) . '">' . $x . '</a>';  
-        }
-      }
-      echo '<a href="#page-links">Cancel</a></div>';
+if($total_pages > 1) {
+  echo '<div id="page-select"><span class="page-select-label">Select a page: </span>';
+  for ($x = 1; $x <= $total_pages; $x++) {
+    if ($x == $my_page){
+      echo '<a class="selected">' . $x . '</a>';
     }
-    echo ($last_page) ? '' : '<a class="bubble" href="' . $next_page . '">⇨</a>';
+    else {
+      echo '<a href="' . GET('siteurl') . $bang;
+      echo ($is_cat) ? $my_cat . '/' : ''; 
+      echo ($x) . '">' . $x . '</a>';  
+    }
+  }
+  echo '<a href="#page-links">Cancel</a></div>';
+}
+if ($my_page == 2 && !$is_cat):
+  echo '<a class="bubble" href="' . GET('siteurl') . '">⇦</a>';
+else:
+  echo ($first_page) ? '' : '<a class="bubble" href="' . $prev_page . '">⇦</a>';
+endif;
+echo ($total_pages > 1) ? '<span class="page-display">Page <a class="current-page" href="#page-select">' . $my_page . '</a><a href="#page-links" class="current-page cancel">⇩</a> of ' . $total_pages . '</span>' : '';
+
+echo ($last_page) ? '' : '<a class="bubble" href="' . $next_page . '">⇨</a>';
 ?>
 </nav>
 
