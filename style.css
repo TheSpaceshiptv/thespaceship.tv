@@ -389,7 +389,36 @@ input
 {
     display:block;
 }
-
+.page-links
+{
+    position:relative;
+}
+.page-links .current-page
+{
+    border-bottom:solid 1px;
+    padding: 5px 13px;
+    border-radius:0;
+}
+.page-links #page-select
+{
+    position: absolute;
+    width:100%;
+    top:40px;
+    background: rgba(0,0,0,0.3);
+    padding: 10px 0;
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+.page-links #page-select a
+{
+    margin-left:20px;
+}
+.page-links #page-select a:last-child
+{
+    text-decoration:underline;
+    font-style:italic;
+    opacity: .5;
+    
+}
 .home .site-card .category 
 {
     margin-bottom:10px;
