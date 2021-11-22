@@ -53,7 +53,7 @@ body::after
     animation: bg-animation ease-in-out 3s infinite alternate;
     position:fixed;
     background-image: url("https://thespaceship.tv/wp-content/themes/the-spaceship/assets/bg.jpg");
-    background-position: center top;
+    background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

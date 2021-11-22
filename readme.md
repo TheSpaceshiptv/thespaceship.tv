@@ -21,7 +21,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 
 ## COMPLETED
 
-new
+- merge contact and FAQ page
 - add a pagination indicator
 - background pulse animation
 - fix top navigation layout

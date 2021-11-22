@@ -187,7 +187,7 @@ endwhile;
     else:
 	    echo ($first_page) ? '' : '<a href="' . $prev_page . '">⇦</a>';
     endif;
-    echo ($total_pages > 1) ? '' : '<span class="current-page">Page ' . $my_page . ' of ' . $total_pages . '</span>';
+    echo ($total_pages > 1) ? '<span class="current-page">Page ' . $my_page . ' of ' . $total_pages . '</span>' : '';
     echo ($last_page) ? '' : '<a href="' . $next_page . '">⇨</a>';
 ?>
 </nav>
