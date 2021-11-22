@@ -187,7 +187,7 @@ endwhile;
     else:
 	    echo ($first_page) ? '' : '<a class="bubble" href="' . $prev_page . '">⇦</a>';
     endif;
-    echo ($total_pages > 1) ? '<span>Page <a href="#page-select">' . $my_page . '</a> of ' . $total_pages . '</span>' : '';
+    echo ($total_pages > 1) ? '<span class="page-display">Page <a class="current-page" href="#page-select">' . $my_page . '</a> of ' . $total_pages . '</span>' : '';
     if($total_pages > 1) {
       echo '<div id="page-select"><span class="page-select-label">Select a Page: </span>';
       for ($x = 0; $x <= $total_pages; $x++) {
