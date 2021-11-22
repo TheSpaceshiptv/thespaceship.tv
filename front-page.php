@@ -201,7 +201,7 @@ if ($my_page == 2 && !$is_cat):
 else:
   echo ($first_page) ? '' : '<a class="bubble" href="' . $prev_page . '">⇦</a>';
 endif;
-echo ($total_pages > 1) ? '<span class="page-display">Page <a class="current-page" href="#page-select">' . $my_page . '</a><a href="#page-links" class="current-page cancel">✕</a> of ' . $total_pages . '</span>' : '';
+echo ($total_pages > 1) ? '<span class="page-display">Page <a class="current-page" href="#page-select">' . $my_page . '</a><a href="#page-links" class="current-page cancel">✖</a> of ' . $total_pages . '</span>' : '';
 
 echo ($last_page) ? '' : '<a class="bubble" href="' . $next_page . '">⇨</a>';
 ?>
