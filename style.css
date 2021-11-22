@@ -16,7 +16,7 @@ Version:        0.99
     }
     to
     {
-        filter: hue-rotate(20deg) contrast(100%) saturate(100%) brightness(110%);
+        filter: hue-rotate(10deg) contrast(100%) saturate(100%) brightness(110%);
     }
 }
 ::-moz-selection 
@@ -50,7 +50,7 @@ body
 }
 body::after
 {
-    animation: bg-animation ease-in-out 2s infinite alternate;
+    animation: bg-animation ease-in-out 3s infinite alternate;
     position:fixed;
     background-image: url("https://thespaceship.tv/wp-content/themes/the-spaceship/assets/bg.jpg");
     background-position: center top;
