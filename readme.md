@@ -24,17 +24,18 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 ## COMPLETED
 
 new
+- background pulse animation
 - fix top navigation layout
 - improve cart readability
 - add quantity indicator to cart link
 - implement FAQ page
 - login redirect to orders
 - allow merch quantities 
+
+old
 - built cart page
 - create landing page for purchase
 - move contact us to top nav
-
-old
 - descriptions missing
 - create a link to donate product from all descriptions
 - make donate product hidden from main page
