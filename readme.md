@@ -16,11 +16,13 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 
 ## IN PROGRESS
 
+- close pagination by clicking current page number
 - purchase not working for out of state
 - 18+ checkbox
 
 ## COMPLETED
 
+- pagination custom page selection
 - merge contact and FAQ into help page
 - add a pagination indicator
 - background pulse animation
