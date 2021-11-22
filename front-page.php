@@ -191,9 +191,14 @@ endwhile;
     if($total_pages > 1) {
       echo '<div id="page-select"><span class="page-select-label">Select a Page: </span>';
       for ($x = 1; $x <= $total_pages; $x++) {
-        echo '<a href="' . GET('siteurl') . $bang;
-        echo ($is_cat) ? $my_cat . '/' : ''; 
-        echo ($x) . '">' . $x . '</a>';
+        if ($x == $my_page){
+          echo '<a class="selected">' . $x . '</a>';
+        }
+        else {
+          echo '<a href="' . GET('siteurl') . $bang;
+          echo ($is_cat) ? $my_cat . '/' : ''; 
+          echo ($x) . '">' . $x . '</a>';  
+        }
       }
       echo '<a href="#page-links">Cancel</a></div>';
     }

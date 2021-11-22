@@ -390,6 +390,10 @@ input
 {
     display:block;
 }
+#page-select .selected
+{
+    color:#E966C2;
+}
 .page-links .current-page
 {
     border-bottom:solid 1px;
