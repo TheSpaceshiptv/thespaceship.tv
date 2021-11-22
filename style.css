@@ -66,7 +66,7 @@ body::after
 }
 a,button,input,label 
 { 
-    transition: color .3s, transform .3s, filter .3s; 
+    transition: color .3s, transform .3s, filter .3s, border-color .3s; 
     text-decoration: none; 
 }
 body, a 
