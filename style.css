@@ -396,6 +396,10 @@ input
     padding: 5px 13px;
     border-radius:0;
 }
+.page-links .current-page:hover
+{
+    border-color:#2ACEBB;
+}
 .page-links #page-select
 {
     position: absolute;
