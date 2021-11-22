@@ -422,13 +422,6 @@ input
 {
     margin-left:20px;
 }
-.page-links #page-select a:last-child
-{
-    text-decoration:underline;
-    font-style:italic;
-    opacity: .5;
-    
-}
 .home .site-card .category 
 {
     margin-bottom:10px;
