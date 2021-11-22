@@ -193,7 +193,7 @@ endwhile;
       for ($x = 0; $x <= $total_pages; $x++) {
         echo '<a href="' . GET('siteurl') . $bang . $my_cat . '/' . ($x) . '">' . $x . '</a>';
       }
-      echo '<a href="#">Cancel</a></div>'
+      echo '<a href="#">Cancel</a></div>';
     }
     echo ($last_page) ? '' : '<a href="' . $next_page . '">⇨</a>';
 ?>
