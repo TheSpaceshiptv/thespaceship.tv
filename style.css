@@ -371,16 +371,11 @@ input
     border-radius: 40px;
     box-shadow: 0 0 10px black;
 }
-.current-page
+.page-display
 {
     background:rgba(0,0,0,0.4);
     border-radius:10px;
     box-shadow:1px 1px 20px black;
-}
-.corrent-page a
-{
-    text-decoration: underline;
-    color:white;
 }
 #page-select
 {
@@ -397,7 +392,7 @@ input
 }
 .page-links .current-page
 {
-    border-bottom:solid 1px;
+    border-bottom:dashed 1px #B1C8C8;
     padding: 5px 13px;
     border-radius:0;
 }
