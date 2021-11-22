@@ -190,8 +190,10 @@ endwhile;
     echo ($total_pages > 1) ? '<span class="page-display">Page <a class="current-page" href="#page-select">' . $my_page . '</a> of ' . $total_pages . '</span>' : '';
     if($total_pages > 1) {
       echo '<div id="page-select"><span class="page-select-label">Select a Page: </span>';
-      for ($x = 0; $x <= $total_pages; $x++) {
-        echo '<a href="' . GET('siteurl') . $bang . $my_cat . '/' . ($x) . '">' . $x . '</a>';
+      for ($x = 1; $x <= $total_pages; $x++) {
+        echo '<a href="' . GET('siteurl') . $bang;
+        echo ($is_cat) ? $my_cat . '/' : ''; 
+        echo ($x) . '">' . $x . '</a>';
       }
       echo '<a href="#page-links">Cancel</a></div>';
     }
