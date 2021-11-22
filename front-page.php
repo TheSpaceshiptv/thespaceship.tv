@@ -180,7 +180,7 @@ endwhile;
 ?>
 
 
-<nav class="page-links">
+<nav id="page-links" class="page-links">
 <?php 
     if ($my_page == 2 && !$is_cat):
 	    echo '<a href="' . GET('siteurl') . '">⇦</a>';
@@ -193,7 +193,7 @@ endwhile;
       for ($x = 0; $x <= $total_pages; $x++) {
         echo '<a href="' . GET('siteurl') . $bang . $my_cat . '/' . ($x) . '">' . $x . '</a>';
       }
-      echo '<a href="#">Cancel</a></div>';
+      echo '<a href="#page-links">Cancel</a></div>';
     }
     echo ($last_page) ? '' : '<a href="' . $next_page . '">⇨</a>';
 ?>
