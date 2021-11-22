@@ -393,6 +393,7 @@ input
 #page-select .selected
 {
     color:#E966C2;
+    text-decoration: underline;
 }
 .page-links .current-page
 {
