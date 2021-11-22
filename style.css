@@ -376,6 +376,19 @@ input
     border-radius:10px;
     box-shadow:1px 1px 20px black;
 }
+.corrent-page a
+{
+    text-decoration: underline;
+    color:white;
+}
+#page-select
+{
+    display: none;
+}
+#page-select:target
+{
+    display:block;
+}
 
 .home .site-card .category 
 {
@@ -1786,10 +1799,6 @@ body.woocommerce-account p button:hover
     filter:invert(1);
     margin: 40px 0 20px;
     font-size:20px;
-}
-.page-id-675 .gform_confirmation_message_1 
-{
-    margin-top:20px;
 }
 @media only screen and (max-width: 641px)
 {
