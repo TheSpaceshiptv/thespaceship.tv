@@ -105,7 +105,7 @@ input
     display: flex; 
     margin-bottom: 40px; 
 }
-.page-id-675 .site-nav a[href*="contact"],
+.page-id-675 .site-nav a[href*="help"],
 .body-merch .site-nav a[href*="merch"],
 .woocommerce-account .site-nav a[href*="account"]
 {
@@ -1718,7 +1718,7 @@ body.woocommerce-account p button:hover
 }
 .page-id-675 .site-card:before
 {
-    content: "Contact";
+    content: "help";
 }
 
 
@@ -1728,7 +1728,7 @@ body.woocommerce-account p button:hover
 
 
 
-/* CONTACT FORM *\
+/* HELP PAGE *\
 \* ------------ */
 #gform_fields_1 input, #gform_fields_1 textarea 
 {
@@ -1750,4 +1750,41 @@ body.woocommerce-account p button:hover
     cursor: pointer;
     transform: scale(1.1);
     color: white;
+}
+.page-id-675 .site-card 
+{
+    grid: auto / minmax(300px, 1fr) minmax(300px, 1fr);
+    grid-column-gap: 20px;
+    
+}
+.page-id-675 .gform-body::before 
+{
+    display:block;
+    content: "Help";
+    font-weight: bold;
+    font-size:20px;
+    margin-top:20px;
+}
+.page-id-675 .gform_wrapper input:not([type="submit"]),
+.page-id-675 .gform_wrapper .ginput_complex > span
+{
+    width:100%!important;
+    margin-bottom:10px;
+}
+.page-id-675 .sp-easy-accordion::before 
+{
+    display:block;
+    content: "FAQ";
+    font-weight:bold;
+    filter:invert(1);
+    margin: 40px 0 20px;
+    font-size:20px;
+}
+@media only screen and (max-width: 641px)
+{
+    .page-id-675 .site-card:not(.merch), .page .site-card 
+    {
+        display:flex!important;
+        flex-direction: column;
+    }
 }

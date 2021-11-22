@@ -27,7 +27,7 @@
             <img src="<?php bloginfo('template_url') ?>/assets/logo-long.png" alt="TheSpaceShip.tv">
         </a>
         <a href="<?php echo site_url();?>/?/merch/1">Merch</a>
-        <a href="<?php echo site_url();?>/contact">Contact</a>
+        <a href="<?php echo site_url();?>/help">Help</a>
         <?php echo do_shortcode( '[xoo_el_action type="login" display="button" text="Login" change_to="myaccount" redirect_to="https://thespaceship.tv/account/orders/"]' ); ?>
         <?php if ( WC()->cart->get_cart_contents_count() != 0 ) { ?>
         <a href="<?php echo site_url();?>/cart">🛒(<?php echo WC()->cart->get_cart_contents_count() ?>)</a>

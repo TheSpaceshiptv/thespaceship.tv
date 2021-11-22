@@ -8,10 +8,8 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 - gift purchases
 - discount codes
 - season pass
-- create landing page for login / signup
 - create about page
 - user role signup (password?)
-- add a pagination indicator
 - fix layout breaking when show ends before start (?)
 - add error icon if show ends before start (?)
 - discount scheduling calendar no display
@@ -24,6 +22,7 @@ This repository contains the files for a custom WordPress theme for [thespaceshi
 ## COMPLETED
 
 new
+- add a pagination indicator
 - background pulse animation
 - fix top navigation layout
 - improve cart readability
