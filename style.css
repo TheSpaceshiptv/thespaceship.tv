@@ -1188,7 +1188,7 @@ button.pswp__button
 {
     content:" ⇨";
 }
-.woocommerce-cart .wc-proceed-to-checkout .checkout-button:hover
+.woocommerce-cart .wc-proceed-to-checkout:hover .checkout-button
 {
     display:block;
     transform:scale(1.1);
