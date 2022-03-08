@@ -1190,6 +1190,7 @@ button.pswp__button
 }
 .woocommerce-cart .wc-proceed-to-checkout .checkout-button:hover
 {
+    display:block;
     transform:scale(1.1);
     color:white;
 }
