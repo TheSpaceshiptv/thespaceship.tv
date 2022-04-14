@@ -159,10 +159,10 @@ while ( $loop->have_posts() ) : $loop->the_post();
             if ($my_cat=='merch'): echo '$' . number_format((float)(
               $product->get_price()
             ), 2, '.', '');
-            elseif ( $times->is_showtime ): echo 'LIVE NOW';
+            elseif ( $times->is_showtime ): echo 'WATCH NOW';
             elseif ( GET('bought') && $times->is_early ): echo 'WATCH SOON';
             elseif ( GET('bought') ): echo 'WATCH NOW';
-            elseif ( $product->get_price() == 0): echo 'WATCH FREE';
+            elseif ( $product->get_price() == 0): echo 'WATCH NOW';
             elseif ( $times->is_late): echo 'WATCH FOR $' . $product->get_price();
             else: echo '$' . $product->get_price() . ' TICKETS';
             endif; ?> 
