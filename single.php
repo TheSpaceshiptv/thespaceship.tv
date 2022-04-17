@@ -79,7 +79,7 @@ while ( have_posts() ): the_post();
 			echo '<p><a href="' . GET('siteurl') . '/?/' . $product_slug . '/1">'. $product_cat . '</a></p>';
 		    }
 			
-			call_to_action(!$loggedin);
+			call_to_action($loggedin);
 			?>
 			
 		    <p>...start transmission</p>
@@ -117,9 +117,8 @@ while ( have_posts() ): the_post();
 			echo '<p><a href="' . GET('siteurl') . '/?/' . $product_slug . '/1">'. $product_cat . '</a></p>';
 	    }
 
-		if(($bought || $free || $admin || $crew) && ($times->is_late || $times->is_chat_open)) { call_to_action($loggedin); }
 
-		call_to_action(!$loggedin);
+		call_to_action($loggedin);
 	    ?>
 	    <p>...start transmission</p>
 		<?php 	
