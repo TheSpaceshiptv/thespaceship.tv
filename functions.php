@@ -110,13 +110,13 @@ function show_info() {
         '</div>' ;
 }
 
-function call_to_action($i){
-    if ($i) {
+function call_to_action($b){
+    if ($b == true) {
     echo '<p><i>Enjoying the show? Consider ';
-    echo do_shortcode( '[xoo_el_action type="register" display="link" text="SIGNING UP" redirect_to="same"]' );
+    echo do_shortcode( '[xoo_el_action type="register" display="link" text="signing up" redirect_to="same"]' );
     echo ' to catch our latest live shows!</i></p>';
     } else {
-    echo '<a class="donate button" href="' . GET('siteurl') . '/checkout/?add-to-cart=1954">Donate Now ⇨</a>';
+    return;
     }
 }
 
