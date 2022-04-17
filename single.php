@@ -79,7 +79,7 @@ while ( have_posts() ): the_post();
 			echo '<p><a href="' . GET('siteurl') . '/?/' . $product_slug . '/1">'. $product_cat . '</a></p>';
 		    }
 			
-			call_to_action($loggedin);
+			if ($loggedin == false) { call_to_action(); }
 			?>
 			
 		    <p>..start transmission</p>
@@ -118,7 +118,7 @@ while ( have_posts() ): the_post();
 	    }
 
 
-		call_to_action($loggedin);
+		if ($loggedin == false) { call_to_action(); }
 	    ?>
 	    <p>...start transmission</p>
 		<?php 	
