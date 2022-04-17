@@ -82,7 +82,7 @@ while ( have_posts() ): the_post();
 			if ($loggedin == false) { call_to_action(); }
 			?>
 			
-		    <p>..start transmission</p>
+		    <p>...start transmission</p>
 	    	<?php 
 			
 			$notes = scrubLinkPrefix($notes);
