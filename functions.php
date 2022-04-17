@@ -111,13 +111,9 @@ function show_info() {
 }
 
 function call_to_action($b){
-    if ($b == true) {
     echo '<p><i>Enjoying the show? Consider ';
     echo do_shortcode( '[xoo_el_action type="register" display="link" text="signing up" redirect_to="same"]' );
     echo ' to catch our latest live shows!</i></p>';
-    } else {
-    return;
-    }
 }
 
 
