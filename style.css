@@ -703,6 +703,10 @@ body.single div.wdpgk-common-popup div.wdpgk-modal-dialog
     border-radius: 0 10px 10px 0;
     border-color: #E966C2!important;
 }
+button.wdpgk-close-popup
+{
+    background:none!important;
+}
 @media only screen and (max-width: 600px) 
 {
     .single-product .site-card:not(.merch), .page .site-card 
