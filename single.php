@@ -80,6 +80,7 @@ while ( have_posts() ): the_post();
 		    }
 			
 			if ($loggedin == false) { call_to_action(); }
+			else { echo do_shortcode( '[wdpgk_donation_btn]' ); }
 			?>
 			
 		    <p>...start transmission</p>
