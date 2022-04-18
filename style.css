@@ -680,6 +680,28 @@ input
     float:right;
     border-radius:10px;
 }
+.wdpgk-common-popup
+{
+    background:rgba(0,0,0,.5)!important;
+    border-radius:30px;
+}
+.wdpgk-modal-dialog
+{
+    background:rgba(0,0,0,.8)!important;
+    border-radius:30px;
+    box-shadow:black 0 0 50px,black 0 0 50px;
+}
+.cur_syambols
+{
+    border-radius: 10px 0 0 10px;
+    background:#E966C2!important;
+    color:black!important;
+}
+.wdpgk_donation_text
+{
+    border-radius: 0 10px 10px 0;
+    border-color: #E966C2!important;
+}
 @media only screen and (max-width: 600px) 
 {
     .single-product .site-card:not(.merch), .page .site-card 
