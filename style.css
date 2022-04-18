@@ -672,6 +672,13 @@ input
 {
     margin:0 0 30px 30px;
 }
+.wdpgk_shortcode_btm 
+{
+    border: double #E966C2;
+    padding: 5px 10px;
+    float:right;
+    border-radius:10px;
+}
 @media only screen and (max-width: 600px) 
 {
     .single-product .site-card:not(.merch), .page .site-card 
