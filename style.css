@@ -686,7 +686,7 @@ input
     background:rgba(0,0,0,.5)!important;
     border-radius:30px;
 }
-.wdpgk-modal-dialog
+body.single div.wdpgk-common-popup div.wdpgk-modal-dialog
 {
     background-color:rgba(0,0,0,.8)!important;
     border-radius:30px;
