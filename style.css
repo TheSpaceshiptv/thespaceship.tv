@@ -679,6 +679,7 @@ input
     padding: 5px 10px;
     float:right;
     border-radius:10px;
+    cursor:pointer;
 }
 .wdpgk-common-popup
 {
