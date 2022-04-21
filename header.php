@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title> <?php echo GET('sitename'); ?> </title>
+    <title><?php wp_title( '|', true, 'right' ); ?> | <?php echo GET('sitename'); ?></title>
 
     <meta name="description" content="<?php echo bloginfo('description');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
