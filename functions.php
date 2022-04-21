@@ -28,7 +28,6 @@ function limit_to_five_tags($terms) {
     return array_slice($terms,0,5,true);
 }
 
-
 add_action('admin_head', 'hide_editor');
 function hide_editor() {
     echo '<style>
@@ -40,13 +39,11 @@ function hide_editor() {
     </style>';
 }
 
-
 add_filter('pods_meta_default_box_title','changethatname');
 function changethatname($value) {
     $value = 'Show Details';
     return $value;
 }
-
 
 function GET($i) {
     if($i == 'googlefont')  return 'https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,400;0,700;1,400&display=swap';
@@ -70,14 +67,12 @@ function GET($i) {
     if($i == 'loggedin')    return is_user_logged_in();
 }
 
-  
 function scrubLinkPrefix($s) {
     return preg_replace('@(https?:\/\/)|(www\.)@', '', $s);
 }
 function makeClickableLinks($s) {
     return preg_replace('@(([a-z,0-9,\-,\_]+)(\.)([^\ ,\<,\>,\n,\r]+)[^\.,\ ,\<, \>, \n, \r])@', '<a href="http://$1" target="_blank">$1</a>', $s);
 }
-
 
 function show_info() {
     $times = get_times();
@@ -110,12 +105,11 @@ function show_info() {
         '</div>' ;
 }
 
-function call_to_action($b){
-    echo '<p><i>Enjoying the show? Consider ';
-    echo do_shortcode( '[xoo_el_action type="register" display="link" text="signing up" redirect_to="same"]' );
+function call_to_action(){
+    echo '<p><i>Please ';
+    echo do_shortcode( '[xoo_el_action type="register" display="link" text="sign" redirect_to="same"]' );
     echo ' to catch our latest live shows!</i></p>';
 }
-
 
 // To change add to cart text on single product page
 /*
@@ -124,8 +118,6 @@ function woocommerce_custom_single_add_to_cart_text() {
     return __( 'Buy Now', 'woocommerce' ); 
 }
 */
-
-
 
 add_action('pre_get_posts', 'wpa_44672' );
 function wpa_44672( $wp_query ) {
@@ -138,7 +130,6 @@ function wpa_44672( $wp_query ) {
         //$wp_query->set('category__not_in', $excluded);
     }
 }
-
 
 /**
  * Exclude products from a particular category on the shop page
@@ -159,7 +150,6 @@ function custom_pre_get_posts_query( $q ) {
 
 }
 add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );  
-
 
 // a function to get the times for an event and do a bunch of calculation/evaluation
 function get_times() {

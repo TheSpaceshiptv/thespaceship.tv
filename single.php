@@ -79,7 +79,7 @@ while ( have_posts() ): the_post();
 			echo '<p><a href="' . GET('siteurl') . '/?/' . $product_slug . '/1">'. $product_cat . '</a></p>';
 		    }
 			
-			if ($loggedin == false) { call_to_action(); }
+			if ($loggedin == false) { call_to_action(  ); }
 			else { echo do_shortcode( '[wdpgk_donation_btn]' ); }
 			?>
 			
@@ -119,7 +119,7 @@ while ( have_posts() ): the_post();
 	    }
 
 
-		if ($loggedin == false) { call_to_action( 'Please log into the site!' ); }
+		if ($loggedin == false) { call_to_action(); }
 		else { echo do_shortcode( '[wdpgk_donation_btn]' ); }
 	    ?>
 	    <p>...start transmission</p>
@@ -130,7 +130,6 @@ while ( have_posts() ): the_post();
 		?>
 	    <p>end transmission...</p>
 	    <?php endif; ?>
-
 
     </div>
 
