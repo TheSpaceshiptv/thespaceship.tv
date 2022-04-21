@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title><?php wp_title( '|', true, 'right' ); ?> | <?php echo GET('sitename'); ?></title>
+    <title><?php wp_title( '|' . GET('sitename'), true, 'right' ); ?></title>
 
     <meta name="description" content="<?php echo bloginfo('description');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     <link href="<?php echo GET('googlefont')?>" rel="stylesheet">
     <link rel="icon" type="image/png" href="<?php GET('themeurl')?>/assets/logo.png">
     <link href="<?php bloginfo('template_url') ?>/style.css?ver=<?php echo rand(111,999) ?>" rel="stylesheet">
-    
+
     <?php wp_head(); ?>
 
 </head>
