@@ -111,7 +111,7 @@ function show_info() {
 
 function call_to_action($s){
     echo '<p><i>Please ';
-    echo do_shortcode( '[xoo_el_action type="register" display="link" text="sign" redirect_to="same"]' );
+    echo do_shortcode( '[xoo_el_action type="register" display="link" text="sign up" redirect_to="same"]' );
     echo ' to catch our latest live shows!</i></p>';
 }
 
