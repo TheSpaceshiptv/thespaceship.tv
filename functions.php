@@ -28,6 +28,7 @@ function limit_to_five_tags($terms) {
     return array_slice($terms,0,5,true);
 }
 
+
 add_action('admin_head', 'hide_editor');
 function hide_editor() {
     echo '<style>
@@ -39,11 +40,13 @@ function hide_editor() {
     </style>';
 }
 
+
 add_filter('pods_meta_default_box_title','changethatname');
 function changethatname($value) {
     $value = 'Show Details';
     return $value;
 }
+
 
 function GET($i) {
     if($i == 'googlefont')  return 'https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,400;0,700;1,400&display=swap';
@@ -66,6 +69,7 @@ function GET($i) {
     if($i == 'bought')      return wc_customer_bought_product(GET('useremail'), GET('userid'), GET('id'));
     if($i == 'loggedin')    return is_user_logged_in();
 }
+
 
 function scrubLinkPrefix($s) {
     return preg_replace('@(https?:\/\/)|(www\.)@', '', $s);
@@ -105,7 +109,7 @@ function show_info() {
         '</div>' ;
 }
 
-function call_to_action(){
+function call_to_action($s){
     echo '<p><i>Please ';
     echo do_shortcode( '[xoo_el_action type="register" display="link" text="sign" redirect_to="same"]' );
     echo ' to catch our latest live shows!</i></p>';
